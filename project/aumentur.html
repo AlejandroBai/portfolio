@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Viewport -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+  <!-- SEO meta tags -->
+  <title>Álex Bayo Saiz | Aumentur</title>
+  <meta name="description"
+        content="Álex Bayo Saiz - Aumentur, una aplicación para descubrir el mundo a través de la realidad aumentada.">
+  <meta name="keywords"
+        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer">
+  <meta name="author" content="Álex Bayo Saiz">
+  <meta name="theme-color" content="#ff5252">
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" href="../assets/img/projects/aumentur/favicon/favicon-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/projects/aumentur/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/img/projects/aumentur/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/projects/aumentur/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/img/projects/aumentur/favicon/site.webmanifest" />
+
+  <!-- Theme switcher (color modes) -->
+  <script src="../assets/js/theme-switcher.js"></script>
+
+  <!-- Import Google font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" id="google-font">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/img-comparison-slider/dist/styles.css">
+
+  <!-- Font icons -->
+  <link rel="stylesheet" href="../assets/icons/bai-icons.min.css">
+
+  <!-- Theme styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+  <!-- Page loading styles -->
+  <style>
+      .page-loading {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transition: all .4s .2s ease-in-out;
+          transition: all .4s .2s ease-in-out;
+          background-color: #fff;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 9999;
+      }
+
+      [data-bs-theme="dark"] .page-loading {
+          background-color: #121519;
+      }
+
+      .page-loading.active {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .page-loading-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+          opacity: 0;
+      }
+
+      .page-loading.active > .page-loading-inner {
+          opacity: 1;
+      }
+
+      .page-loading-inner > span {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          font-weight: normal;
+          color: #6f788b;
+      }
+
+      [data-bs-theme="dark"] .page-loading-inner > span {
+          color: #fff;
+          opacity: .6;
+      }
+
+      .page-spinner {
+          display: inline-block;
+          width: 2.75rem;
+          height: 2.75rem;
+          margin-bottom: .75rem;
+          vertical-align: text-bottom;
+          background-color: #d7dde2;
+          border-radius: 50%;
+          opacity: 0;
+          -webkit-animation: spinner .75s linear infinite;
+          animation: spinner .75s linear infinite;
+      }
+
+      [data-bs-theme="dark"] .page-spinner {
+          background-color: rgba(255, 255, 255, .25);
+      }
+
+      @-webkit-keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+
+      @keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+  </style>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function() {
+      window.onload = function() {
+        const preloader = document.querySelector(".page-loading")
+        preloader.classList.remove("active")
+        setTimeout(function() {
+          preloader.remove()
+        }, 1500)
+      }
+    })()
+  </script>
+</head>
+
+
+<!-- Body -->
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+  <div class="page-loading-inner">
+    <div class="page-spinner"></div>
+    <span>Loading...</span>
+  </div>
+</div>
+
+<!-- Page wrapper -->
+<main>
+
+  <header class="navbar navbar-expand-lg fixed-top py-1 py-md-0 bg-transparent" data-bs-theme="light"
+          data-initial-bs-theme="light">
+    <div class="container-fluid px-1 px-sm-2 p-md-3 px-lg-4">
+      <a href="../index.html"
+         class="btn btn-sm btn-outline-dark rounded-pill border-0 ps-2 pe-3 fs-sm">
+        <i class="baicon-arrow-left me-1 fs-4"></i>
+        <span class="text-uppercase fw-bold" data-key="common.back"></span>
+      </a>
+      <button type="button" id="languageButton"
+              class="btn btn-sm btn-outline-dark rounded-pill border-0 ms-auto ps-2 pe-3">
+        <i class="baicon-globe me-2 fs-5"></i>
+        <span class="text-uppercase fw-bold fs-sm">Es<span class="d-none d-md-inline">pañol</span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero title -->
+  <section class="position-relative bg-dark vh-100">
+    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
+      <div class="jarallax-img" style="background: linear-gradient(0deg, #f6eae9, #f6eae9);"></div>
+    </div>
+
+    <div id="main-hero-img" class="jarallax w-100 ms-auto min-vh-100 position-absolute top-0" data-jarallax>
+      <div class="w-100 h-100 min-vh-100">
+        <div class="jarallax-img d-flex align-items-center align-items-lg-center">
+          <div class="container p-4 py-md-5">
+            <div class="row justify-content-center">
+              <div class="col-auto offset-lg-5 mb-auto">
+                <div class="container-gradient d-flex justify-content-center">
+                  <div class="video-container d-flex justify-content-center">
+                    <video
+                      class="responsive-video"
+                      poster="../assets/img/projects/aumentur/hero.webp"
+                      data-video="../assets/img/projects/aumentur/ui/ui.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                    >
+                      <!-- El elemento source se añadirá dinámicamente -->
+                      Tu navegador no soporta el elemento de vídeo.
+                    </video>
+                    <!-- Imagen de póster para móviles -->
+                    <img
+                      class="poster-image"
+                      src="../assets/img/projects/aumentur/hero.webp"
+                      alt="Póster del video"
+                      style="display: none;"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jarallax w-100 mx-auto min-vh-100 position-absolute top-0" data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100 min-vh-100">
+        <div class="jarallax-img d-flex align-items-lg-center">
+          <div class="container d-flex flex-column justify-content-end">
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-auto">
+                <h2 class="main-title gloock mt-n5" style="color: #ff5252" data-key="projects.aumentur.name"></h2>
+              </div>
+            </div>
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-auto">
+                <a href="#main-section" class="btn btn-icon btn-light rounded-pill mt-lg-5" data-scroll
+                   aria-label="Scroll to main-section">
+                  <i class="baicon-arrow-down"></i>
+                </a>
+              </div>
+            </div>
+            <div class="d-lg-none" style="height: 18vh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section id="main-section" class="position-relative py-5 mb-sm-5">
+    <div class="container position-relative z-2 py-5 pb-lg-0">
+      <div class="row">
+        <!-- Description -->
+        <div class="offset-sm-1 col-sm-10 mb-5">
+          <h3 class="text-uppercase fs-base fw-bolder" data-key="common.about_project"></h3>
+          <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.aumentur.introduction"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10 col-lg-7 col-xl-6">
+          <div>
+            <p class="mx-auto mx-lg-0 mb-5 lead text-dark" data-key="projects.aumentur.description"></p>
+            <a class="custom-btn" href="https://www.aumentur.app/" target="_blank"
+               data-key="projects.aumentur.action_text"></a>
+          </div>
+        </div>
+
+        <!-- Sticky sidebar with brief -->
+        <aside class="offset-sm-1 col-lg-2 offset-lg-1 offset-xl-2" style="margin-top: -125px;">
+          <div class="d-flex d-md-block flex-column position-sticky top-0 mt-5 mt-lg-0" style="padding-top: 130px;">
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.role"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.aumentur.role_1"></li>
+                <li class="d-block pb-1" data-key="projects.aumentur.role_2"></li>
+                <li class="d-block pb-1" data-key="projects.aumentur.role_3"></li>
+              </ul>
+            </div>
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.client"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.aumentur.client_1"></li>
+              </ul>
+            </div>
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.date"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.aumentur.date"></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- image parallax container -->
+  <section class="container py-sm-5 px-sm-4 px-md-5">
+    <figure class="px-sm-4">
+      <div class="rounded-1 overflow-hidden">
+        <div class="jarallax bg-dark py-5" data-jarallax data-speed="0.8">
+          <span class="position-absolute top-0 start-0 w-100 h-100"></span>
+          <div class="jarallax-img" style="background-image: url(../assets/img/projects/aumentur/bg.webp);"></div>
+          <div class="position-relative" style="height: 40vh;"></div>
+        </div>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4"><span data-key="projects.aumentur.figcaption_1"></span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Project visual identity -->
+  <section class="container py-5 mt-lg-5">
+    <div class="row pb-lg-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">01</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4"
+            data-key="projects.aumentur.visual_identity_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.aumentur.visual_identity_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.aumentur.visual_identity_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-5 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="common.typography"></h3>
+        <div class="mt-5">
+          <img class="img-fluid" style="max-width: 270px;" src="../assets/img/projects/aumentur/typography.webp">
+        </div>
+      </div>
+      <div class="offset-sm-1 offset-lg-0 col-sm-10 col-lg-5 mb-5 mt-5 mt-lg-0">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="common.colors"></h3>
+
+        <div class="d-flex flex-column gap-4 mt-5">
+          <div class="color aumentur-color1">
+            <span class="text-white">#ff5252</span>
+          </div>
+          <div class="color aumentur-color2">
+            <span class="text-dark">#D9D9D9</span>
+          </div>
+          <div class="color aumentur-color3">
+            <span class="text-white">#999999</span>
+          </div>
+          <div class="color aumentur-color4">
+            <span class="text-white">#707070</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project logo -->
+  <section class="container py-5">
+    <div class="row pb-lg-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">02</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.aumentur.logo_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.aumentur.logo_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.aumentur.logo_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image comparison full width example -->
+  <section class="py-5">
+    <figure>
+      <div class="overflow-hidden rounded-0 vh-100">
+        <img-comparison-slider class="m-n1 vh-100">
+          <figure slot="first" class="vh-100">
+            <div class="jarallax py-5 vh-100" data-jarallax data-speed="0.8" style="background: #f6eae9;">
+              <div class="jarallax-img vh-100"
+                   style="background-image: url(../assets/img/projects/aumentur/brand/logo.svg); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            </div>
+            <!--          <img src="../assets/img/landing/coworking-space/parallax-image.jpg" alt="Image before">-->
+          </figure>
+          <figure slot="second" class="vh-100">
+            <div class="jarallax py-5 vh-100" data-jarallax data-speed="0.8" style="background: #707070">
+              <div class="jarallax-img vh-100"
+                   style="background-image: url(../assets/img/projects/aumentur/brand/logo-light.svg); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            </div>
+          </figure>
+          <div slot="handle" style="width: 42px;" class="">
+            <svg class="text-dark rounded-circle" width="42" height="42" viewBox="0 0 42 42"
+                 xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <circle fill="currentColor" cx="21" cy="21" r="21" />
+              </g>
+              <path fill="white"
+                    d="M25.5019 19.7494H15.9147V15.9146L11.1211 20.7081L15.9147 25.5017V21.6669H25.5019V25.5017L30.2955 20.7081L25.5019 15.9146V19.7494Z" />
+            </svg>
+          </div>
+        </img-comparison-slider>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4" data-key="projects.aumentur.logo_figcaption"></figcaption>
+    </figure>
+  </section>
+
+  <!-- UI/UX Design -->
+  <section class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">03</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.aumentur.ui_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.aumentur.ui_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.aumentur.ui_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Prototipo XD -->
+  <section class="container pb-5 mb-lg-5 prototype_xd_mobile_section">
+    <div class="row position-sm-relative">
+      <div class="offset-sm-1 col-sm-10 col-lg-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.aumentur.ui_prototype_mobile"></h3>
+        <div class="row justify-content-center">
+          <div class="col-auto col-sm-12">
+            <figure class="d-block mx-auto prototype_xd_mobile_container">
+              <div class="border rounded-1 overflow-hidden p-sm-5"
+                   style="background: #ff5252;">
+                <iframe class="prototype_xd_mobile" height="100%" width="100%"
+                        src="https://xd.adobe.com/embed/e77f0e8a-2dd1-429f-ae8f-15cfe01519c7-b22c/?fullscreen"
+                        frameborder="0" allowfullscreen
+                        style="aspect-ratio: 375/812; border-radius: 6px;"
+                ></iframe>
+              </div>
+              <figcaption class="text-center text-muted mt-2 px-4"
+                          data-key="projects.aumentur.ui_figcaption_mobile"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+        <a href="https://xd.adobe.com/view/e77f0e8a-2dd1-429f-ae8f-15cfe01519c7-b22c/" target="_blank"
+           class="btn-custom ms-auto">
+          <i class="baicon-arrow-up-right"></i>
+          <span class="btn-text text-uppercase fw-bold" data-key="common.view_prototype"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--  Prototipo vídeo -->
+  <section class="container pb-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.aumentur.ui_prototype_mobile2"></h3>
+        <div class="row">
+          <div class="col-12">
+            <figure>
+              <div class="border rounded-1 overflow-hidden p-5"
+                   style="background: #ff5252;">
+                <div class="video-container d-flex">
+                  <video
+                    class="responsive-video"
+                    poster="../assets/img/projects/aumentur/hero.webp"
+                    data-video="../assets/img/projects/aumentur/ui/ui.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    style="aspect-ratio: 375/812; max-height: 70vh; margin: 0 auto;"
+                  >
+                    <!-- El elemento source se añadirá dinámicamente -->
+                    Tu navegador no soporta el elemento de vídeo.
+                  </video>
+                  <!-- Imagen de póster para móviles -->
+                  <img
+                    class="poster-image"
+                    src="../assets/img/projects/aumentur/hero.webp"
+                    alt="Póster del video"
+                    style="display: none;"
+                  />
+                </div>
+              </div>
+              <figcaption class="text-center text-muted mt-2 px-4"
+                          data-key="projects.aumentur.ui_figcaption_mobile2"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What did I learn? -->
+  <section class="py-5 bg-secondary">
+    <div class="container pt-5 my-lg-5">
+      <div class="row">
+        <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+          <h3 class="text-uppercase fs-base fw-bolder">04</h3>
+          <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.aumentur.learn_title"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10">
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold" data-key="projects.aumentur.learn_subtitle"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="text-dark fs-xl" data-key="projects.aumentur.learn_description"></p>
+            </div>
+          </div>
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold" data-key="projects.aumentur.learn_subtitle_2"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="text-dark fs-xl" data-key="projects.aumentur.learn_description_2"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Trabajemos juntos -->
+  <section id="work-together" class="text-light py-5 bg-dark min-vh-100">
+    <div class="container py-5 my-lg-5">
+      <div class="row">
+        <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+          <h3 class="text-uppercase display-3 fw-bolder text-light">😃 🚀</h3>
+          <h2 class="main-intro text-light gloock display-2 pb-3 pb-lg-4"
+              data-key="common.let_start_title"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10">
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold text-light" data-key="common.let_start_subtitle"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="fs-xl text-light" data-key="common.let_start_text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other projects -->
+  <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5 d-none">
+    <h2 class="h1 pb-3 pb-lg-4">Next projects</h2>
+    <div class="row row-cols-1 row-cols-sm-2 align-items-end mb-2 pb-md-4">
+      <div class="col">
+        <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 550px;">
+          <div class="zoom-effect-wrapper">
+            <div class="zoom-effect-img">
+              <img src="../assets/img/portfolio/grid/11.jpg" alt="Image">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="../portfolio-single-v2.html">Doe design</a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span>Branding, Stationery</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
+          <div class="zoom-effect-wrapper">
+            <div class="zoom-effect-img">
+              <img src="../assets/img/portfolio/grid/10.jpg" alt="Image">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="../portfolio-single-v2.html">D.G.Vent</a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span>Stationery design</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Back to top button -->
+<a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+  <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+  </svg>
+  <i class="baicon-arrow-up"></i>
+</a>
+
+
+<!-- Vendor scripts: JS libraries and plugins -->
+<script src="../assets/vendor/aos/dist/aos.js"></script>
+<script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/lightgallery/lightgallery.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="../assets/vendor/img-comparison-slider/dist/index.js"></script>
+
+<!-- Bootstrap + Theme scripts -->
+<script src="../assets/js/theme.min.js"></script>
+
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Viewport -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+  <!-- SEO meta tags -->
+  <title>Álex Bayo Saiz | El Observador</title>
+  <meta name="description"
+        content="Álex Bayo Saiz - El Observador, revista de reportajes periodísticos como fin de grado.">
+  <meta name="keywords"
+        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer">
+  <meta name="author" content="Álex Bayo Saiz">
+  <meta name="theme-color" content="#7777DB">
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" href="../assets/img/about/favicon/favicon-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/about/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/img/about/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/about/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/img/about/favicon/site.webmanifest" />
+
+  <!-- Theme switcher (color modes) -->
+  <script src="../assets/js/theme-switcher.js"></script>
+
+  <!-- Import Google font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"
+        id="google-font">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+
+  <!-- Font icons -->
+  <link rel="stylesheet" href="../assets/icons/bai-icons.min.css">
+
+  <!-- Theme styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+  <!-- Page loading styles -->
+  <style>
+      .page-loading {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transition: all .4s .2s ease-in-out;
+          transition: all .4s .2s ease-in-out;
+          background-color: #fff;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 9999;
+      }
+
+      [data-bs-theme="dark"] .page-loading {
+          background-color: #121519;
+      }
+
+      .page-loading.active {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .page-loading-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+          opacity: 0;
+      }
+
+      .page-loading.active > .page-loading-inner {
+          opacity: 1;
+      }
+
+      .page-loading-inner > span {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          font-weight: normal;
+          color: #6f788b;
+      }
+
+      [data-bs-theme="dark"] .page-loading-inner > span {
+          color: #fff;
+          opacity: .6;
+      }
+
+      .page-spinner {
+          display: inline-block;
+          width: 2.75rem;
+          height: 2.75rem;
+          margin-bottom: .75rem;
+          vertical-align: text-bottom;
+          background-color: #d7dde2;
+          border-radius: 50%;
+          opacity: 0;
+          -webkit-animation: spinner .75s linear infinite;
+          animation: spinner .75s linear infinite;
+      }
+
+      [data-bs-theme="dark"] .page-spinner {
+          background-color: rgba(255, 255, 255, .25);
+      }
+
+      @-webkit-keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+
+      @keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+  </style>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function() {
+      window.onload = function() {
+        const preloader = document.querySelector(".page-loading")
+        preloader.classList.remove("active")
+        setTimeout(function() {
+          preloader.remove()
+        }, 1500)
+      }
+    })()
+  </script>
+</head>
+
+
+<!-- Body -->
+<body>
+
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+  <div class="page-loading-inner">
+    <div class="page-spinner"></div>
+    <span>Loading...</span>
+  </div>
+</div>
+
+
+<!-- Page wrapper -->
+<main class="page-wrapper">
+
+  <header class="navbar navbar-expand-lg fixed-top py-1 py-md-0 bg-transparent" data-bs-theme="light">
+    <div class="container-fluid px-1 px-sm-2 p-md-3 px-lg-4">
+      <a href="../old-projects.html" class="btn btn-sm btn-outline-dark rounded-pill border-0 ps-2 pe-3 fs-sm">
+        <i class="baicon-arrow-left me-2 fs-4"></i>
+        <span class="text-uppercase fw-bold" data-key="common.go_back"></span>
+      </a>
+      <button type="button" id="languageButton"
+              class="btn btn-sm btn-outline-dark rounded-pill border-0 ms-auto ps-2 pe-3">
+        <i class="baicon-globe me-2 fs-4"></i>
+        <span class="text-uppercase fw-bold fs-sm">Español</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="main-section" class="position-relative pt-5 mb-5">
+    <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block">
+      <img class="d-block order-lg-2 me-auto me-lg-0 ms-auto h-100 object-fit-cover"
+           src="../assets/img/old-projects/observador/Observador1.webp"
+           alt="Image">
+    </div>
+    <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+    <div class="container position-relative z-2 py-5 pb-lg-0">
+
+      <div class="d-lg-flex align-items-center pt-3 pb-xxl-5">
+        <img class="d-block order-lg-2 me-auto me-lg-0 ms-auto d-lg-none"
+             src="../assets/img/old-projects/observador/Observador1.webp"
+             width="480"
+             alt="Image">
+        <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+          <h1 class="display-2 frederika pb-3 pb-lg-4" data-key="old_projects.observador.title"></h1>
+          <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;" data-key="old_projects.observador.intro"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Project showcase -->
+  <section class="container pt-lg-2 pt-xl-4 pt-xxl-5">
+    <div class="row py-sm-3 py-md-4 py-lg-5">
+      <!-- Sticky sidebar with brief -->
+      <aside class="offset-sm-1 col-md-3 col-lg-2 order-1 order-md-0" style="margin-top: -125px;">
+        <div class="d-flex d-md-block flex-column position-sticky top-0 mt-5 mt-lg-0" style="padding-top: 130px;">
+          <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+            <h3 class="text-uppercase fs-base fw-bolder" data-key="common.role"></h3>
+            <ul class="list-unstyled fs-lg text-dark mb-0">
+              <li class="d-block pb-1" data-key="old_projects.observador.role_1"></li>
+              <li class="d-block pb-1" data-key="old_projects.observador.role_2"></li>
+              <li class="d-block pb-1" data-key="old_projects.observador.role_3"></li>
+              <li class="d-block pb-1" data-key="old_projects.observador.role_4"></li>
+            </ul>
+          </div>
+          <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+            <h3 class="text-uppercase fs-base fw-bolder" data-key="common.client"></h3>
+            <ul class="list-unstyled fs-lg text-dark mb-0">
+              <li class="d-block pb-1" data-key="old_projects.observador.client_1"></li>
+              <li class="d-block pb-1" data-key="old_projects.observador.client_2"></li>
+            </ul>
+          </div>
+          <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+            <h3 class="text-uppercase fs-base fw-bolder" data-key="common.date"></h3>
+            <ul class="list-unstyled fs-lg text-dark mb-0">
+              <li class="d-block pb-1" data-key="old_projects.observador.date"></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Description -->
+      <div class="offset-sm-1 col-sm-10 col-md-7 order-0 order-md-1">
+        <div class="ps-md-4 ps-lg-0">
+          <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+            <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4" data-key="old_projects.observador.intro"></p>
+          </div>
+          <h2 class="h2 fw-bold pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2" data-key="old_projects.the_idea"></h2>
+          <p class="fs-lg" data-key="old_projects.observador.idea"></p>
+          <h2 class="h2 fw-bold pt-3 pt-sm-4 pt-xl-5 pb-2" data-key="old_projects.the_challenge"></h2>
+          <p class="fs-lg" data-key="old_projects.observador.challenge"></p>
+          <h2 class="h2 fw-bold pt-3 pt-sm-4 pt-xl-5 pb-2" data-key="old_projects.the_solution"></h2>
+          <p class="fs-lg" data-key="old_projects.observador.solution"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery grid with enabled thumbnails -->
+    <div class="gallery row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 py-5 my-lg-5" data-thumbnails="true">
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador1.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #1
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador1.webp" class="d-block rounded-0"
+               alt="Revista El Observador 1">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador2.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #2
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador2.webp" class="d-block rounded-0"
+               alt="Revista El Observador 2">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador3.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #3
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador3.webp" class="d-block rounded-0"
+               alt="Revista El Observador 3">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador4.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #4
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador4.webp" class="d-block rounded-0"
+               alt="Revista El Observador 4">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador5.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #5
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador5.webp" class="d-block rounded-0"
+               alt="Revista El Observador 5">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador6.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #6
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador6.webp" class="d-block rounded-0"
+               alt="Revista El Observador 6">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador7.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #7
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador7.webp" class="d-block rounded-0"
+               alt="Revista El Observador 7">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador8.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #8
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador8.webp" class="d-block rounded-0"
+               alt="Revista El Observador 8">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador9.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #9
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador9.webp" class="d-block rounded-0"
+               alt="Revista El Observador 9">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador10.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #10
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador10.webp" class="d-block rounded-0"
+               alt="Revista El Observador 10">
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <a href="../assets/img/old-projects/observador/Observador11.webp" class="gallery-item d-block card-hover">
+          <div
+            class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+            <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3">
+              Revista El Observador #11
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="../assets/img/old-projects/observador/Observador11.webp" class="d-block rounded-0"
+               alt="Revista El Observador 11">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10">
+        <div class="overflow-hidden rounded-1 d-flex w-xl-75 mx-auto">
+          <iframe src="https://e.issuu.com/embed.html?d=revista_observador_online_r&u=alexbayosaiz" width="60%"
+                  height="500" frameborder="0" allowfullscreen style="aspect-ratio: 16/9; width: 100%;"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Parallax background image -->
+  <section class="jarallax my-5" data-jarallax data-speed="0.6">
+    <div class="ratio ratio-16x9"></div>
+    <div class="jarallax-img"
+         style="background-image: url(../assets/img/old-projects/observador/Observador6.webp);"></div>
+  </section>
+
+
+  <!-- Other projects -->
+  <section class="container py-5 my-lg-5">
+    <h2 class="h2 fw-bold py-3 py-lg-4" data-key="old_projects.other_old_projects"></h2>
+    <div class="row row-cols-2 row-cols-md-3 align-items-end mb-2 pb-md-4">
+      <div class="col">
+        <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
+          <div class="zoom-effect-wrapper" style="background: linear-gradient(135deg, #ff0080 30%, #ff9042 100%)">
+            <div class="zoom-effect-img d-flex" style="aspect-ratio: 1;">
+              <img src="../assets/img/old-projects/psicoesfera/logo.webp" alt="Revista Psicoesfera"
+                   class="object-fit-cover">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="psicoesfera.html" data-key="old_projects.psicoesfera.title"></a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span data-key="old_projects.web"></span>
+              <span data-key="old_projects.psicoesfera.date"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-none">
+        <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
+          <div class="zoom-effect-wrapper">
+            <div class="zoom-effect-img">
+              <img src="../assets/img/portfolio/grid/10.jpg" alt="Image">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="portfolio-single-v2.html">D.G.Vent</a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span>Stationery design</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer bg-dark position-relative py-4 py-md-5">
+  <div class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase display-3 fw-bolder text-light">😃 🚀</h3>
+        <h2 class="main-intro text-light gloock display-2 pb-3 pb-lg-4"
+            data-key="common.let_start_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5 mb-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold text-light" data-key="common.let_start_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="fs-xl text-light" data-key="common.let_start_text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Back to top button -->
+<a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+  <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+  </svg>
+  <i class="baicon-arrow-up"></i>
+</a>
+
+
+<!-- Vendor scripts: JS libraries and plugins -->
+<script src="../assets/vendor/aos/dist/aos.js"></script>
+<script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/lightgallery/lightgallery.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+<!-- Bootstrap + Theme scripts -->
+<script src="../assets/js/theme.min.js"></script>
+</body>
+</html>

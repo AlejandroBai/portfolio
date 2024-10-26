@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Viewport -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+  <!-- SEO meta tags -->
+  <title>Álex Bayo Saiz | Afinca</title>
+  <meta name="description" content="Álex Bayo Saiz - Afinca es un marketplace especializado en el mundo rural.">
+  <meta name="keywords"
+        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer">
+  <meta name="author" content="Álex Bayo Saiz">
+  <meta name="theme-color" content="#7db933">
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" href="../assets/img/about/favicon/favicon-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/about/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/img/about/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/about/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/img/about/favicon/site.webmanifest" />
+
+  <!-- Theme switcher (color modes) -->
+  <script src="../assets/js/theme-switcher.js"></script>
+
+  <!-- Import Google font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" id="google-font">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="../assets/vendor/img-comparison-slider/dist/styles.css">
+
+  <!-- Font icons -->
+  <link rel="stylesheet" href="../assets/icons/bai-icons.min.css">
+
+  <!-- Theme styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+  <!-- Page loading styles -->
+  <style>
+      .page-loading {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transition: all .4s .2s ease-in-out;
+          transition: all .4s .2s ease-in-out;
+          background-color: #fff;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 9999;
+      }
+
+      [data-bs-theme="dark"] .page-loading {
+          background-color: #121519;
+      }
+
+      .page-loading.active {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .page-loading-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+          opacity: 0;
+      }
+
+      .page-loading.active > .page-loading-inner {
+          opacity: 1;
+      }
+
+      .page-loading-inner > span {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          font-weight: normal;
+          color: #6f788b;
+      }
+
+      [data-bs-theme="dark"] .page-loading-inner > span {
+          color: #fff;
+          opacity: .6;
+      }
+
+      .page-spinner {
+          display: inline-block;
+          width: 2.75rem;
+          height: 2.75rem;
+          margin-bottom: .75rem;
+          vertical-align: text-bottom;
+          background-color: #d7dde2;
+          border-radius: 50%;
+          opacity: 0;
+          -webkit-animation: spinner .75s linear infinite;
+          animation: spinner .75s linear infinite;
+      }
+
+      [data-bs-theme="dark"] .page-spinner {
+          background-color: rgba(255, 255, 255, .25);
+      }
+
+      @-webkit-keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+
+      @keyframes spinner {
+          0% {
+              -webkit-transform: scale(0);
+              transform: scale(0);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: none;
+              transform: none;
+          }
+      }
+  </style>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function() {
+      window.onload = function() {
+        const preloader = document.querySelector(".page-loading")
+        preloader.classList.remove("active")
+        setTimeout(function() {
+          preloader.remove()
+        }, 1500)
+      }
+    })()
+  </script>
+</head>
+
+
+<!-- Body -->
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+  <div class="page-loading-inner">
+    <div class="page-spinner"></div>
+    <span>Loading...</span>
+  </div>
+</div>
+
+<!-- Page wrapper -->
+<main>
+  <header class="navbar navbar-expand-lg fixed-top py-1 py-md-0 bg-transparent" data-bs-theme="light">
+    <div class="container-fluid px-1 px-sm-2 p-md-3 px-lg-4">
+      <a href="../index.html"
+         class="btn btn-sm btn-outline-dark rounded-pill border-0 ps-2 pe-3 fs-sm">
+        <i class="baicon-arrow-left me-1 fs-4"></i>
+        <span class="text-uppercase fw-bold" data-key="common.back"></span>
+      </a>
+      <button type="button" id="languageButton"
+              class="btn btn-sm btn-outline-dark rounded-pill border-0 ms-auto ps-2 pe-3">
+        <i class="baicon-globe me-2 fs-5"></i>
+        <span class="text-uppercase fw-bold fs-sm">Es<span class="d-none d-md-inline">pañol</span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero title -->
+  <section class="position-relative bg-dark vh-100">
+    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
+      <div class="jarallax-img" style="background: linear-gradient(140deg, #7bb732, #7bb732);"></div>
+    </div>
+
+    <div id="main-hero-img" class="jarallax w-100 ms-auto min-vh-100 position-absolute top-0" data-jarallax>
+      <div class="w-100 h-100 min-vh-100">
+        <div class="jarallax-img d-flex align-items-center align-items-lg-center">
+          <div class="container p-4 py-md-5">
+            <div class="row justify-content-center">
+              <div class="col-auto offset-lg-5 mb-auto">
+                <div id="rotate-target">
+                  <img src="../assets/img/projects/kikoto/hero-img_es.jpg" class="inner-image"
+                       alt="alejandro_bayo_saiz_kikoto">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jarallax w-100 mx-auto min-vh-100 position-absolute top-0" data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100 min-vh-100">
+        <div class="jarallax-img d-flex align-items-lg-center">
+          <div class="container d-flex flex-column justify-content-end">
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-auto">
+                <h2 class="main-title text-white gloock mt-n5" data-key="projects.afinca.name"></h2>
+              </div>
+            </div>
+            <div class="row justify-content-center justify-content-lg-start">
+              <div class="col-auto">
+                <a href="#main-section" class="btn btn-icon btn-light rounded-pill mt-lg-5" data-scroll
+                   aria-label="Scroll to main-section">
+                  <i class="baicon-arrow-down"></i>
+                </a>
+              </div>
+            </div>
+            <div class="d-lg-none" style="height: 18vh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section id="main-section" class="position-relative py-5 mb-sm-5">
+    <div class="container position-relative z-2 py-5 pb-lg-0">
+      <div class="row">
+        <!-- Description -->
+        <div class="offset-sm-1 col-sm-10 mb-5">
+          <h3 class="text-uppercase fs-base fw-bolder" data-key="common.about_project"></h3>
+          <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.introduction"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10 col-lg-7 col-xl-6">
+          <div>
+            <p class="mx-auto mx-lg-0 mb-5 lead text-dark" data-key="projects.afinca.description"></p>
+            <a class="custom-btn" href="https://kikoto.es" target="_blank" data-key="projects.afinca.action_text"></a>
+          </div>
+        </div>
+
+        <!-- Sticky sidebar with brief -->
+        <aside class="offset-sm-1 col-lg-2 offset-lg-1 offset-xl-2" style="margin-top: -125px;">
+          <div class="d-flex d-md-block flex-column position-sticky top-0 mt-5 mt-lg-0" style="padding-top: 130px;">
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.role"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.afinca.role_1"></li>
+                <li class="d-block pb-1" data-key="projects.afinca.role_2"></li>
+                <li class="d-block pb-1" data-key="projects.afinca.role_3"></li>
+                <li class="d-block pb-1" data-key="projects.afinca.role_4"></li>
+              </ul>
+            </div>
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.client"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.afinca.client_1"></li>
+              </ul>
+            </div>
+            <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+              <h3 class="text-uppercase fs-base fw-bolder" data-key="common.date"></h3>
+              <ul class="list-unstyled fs-lg text-dark mb-0">
+                <li class="d-block pb-1" data-key="projects.afinca.date"></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- image parallax container -->
+  <section class="container py-sm-5 px-sm-4 px-md-5">
+    <figure class="px-sm-4">
+      <div class="rounded-1 overflow-hidden">
+        <div class="jarallax bg-dark py-5" data-jarallax data-speed="0.8">
+          <span class="position-absolute top-0 start-0 w-100 h-100"></span>
+          <div class="jarallax-img" style="background-image: url(../assets/img/projects/afinca/bg.jpg);"></div>
+          <div class="position-relative" style="height: 50vh;"></div>
+        </div>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4"><span data-key="projects.afinca.figcaption_1">
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Project visual identity -->
+  <section class="container py-5 my-lg-5">
+    <div class="row pb-lg-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">01</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4"
+            data-key="projects.afinca.visual_identity_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.visual_identity_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.visual_identity_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-5 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="common.typography"></h3>
+        <div class="mt-5">
+          <img class="img-fluid" style="max-width: 270px;" src="../assets/img/projects/kikoto/typography.webp">
+        </div>
+      </div>
+      <div class="offset-sm-1 offset-lg-0 col-sm-10 col-lg-5 mb-5 mt-5 mt-lg-0">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="common.colors"></h3>
+        <div class="d-flex flex-column gap-4 mt-5">
+          <div class="color color1">
+            <span class="text-white">#02a9f4</span>
+          </div>
+          <div class="color color2">
+            <span class="text-dark">#F4F9FA</span>
+          </div>
+          <div class="color color3">
+            <span class="text-dark">#83A0A3</span>
+          </div>
+          <div class="color color4">
+            <span class="text-white">#3E4146</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- image parallax full-width and opacity -->
+  <section class="container-fluid py-5 my-lg-5 mt-4 px-0">
+    <figure>
+      <div>
+        <div class="jarallax bg-dark py-5" data-jarallax data-speed="0.8" data-type="scroll-opacity">
+          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0"></span>
+          <div class="jarallax-img" style="background-image: url(../assets/img/projects/afinca/bg-1.jpg);"></div>
+          <div class="position-relative" style="height: 50vh;"></div>
+        </div>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4"><span data-key="projects.afinca.figcaption_2">
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Project logo -->
+  <section class="container py-5">
+    <div class="row pb-lg-5">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">02</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.logo_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.logo_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.logo_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo + Icono -->
+  <section class="py-5">
+    <figure>
+      <div class="overflow-hidden rounded-0 vh-100">
+        <figure slot="first" class="vh-100">
+          <div class="jarallax py-5 vh-100" data-jarallax data-speed="0.8" style="background: #f2f3f8;">
+            <div class="jarallax-img vh-100"
+                 style="background-image: url(../assets/img/projects/afinca/brand/logo.svg); background-size: 65%; background-repeat: no-repeat; background-position: center;"></div>
+          </div>
+        </figure>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4" data-key="projects.afinca.logo_figcaption"></figcaption>
+    </figure>
+    <div class="row justify-content-center mt-5">
+      <div class="col-sm-auto">
+        <figure class="d-flex flex-column align-items-center">
+          <div class="overflow-hidden rounded-5 vh-50" style="aspect-ratio: 1;">
+            <div class="jarallax py-5 vh-50" data-jarallax data-speed="1" style="background: #f2f3f8;">
+              <div class="jarallax-img"
+                   style="background-image: url(../assets/img/projects/afinca/brand/favicon.svg); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            </div>
+          </div>
+          <figcaption class="text-center text-muted mt-2 px-4" data-key="projects.afinca.icon_figcaption"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image comparison full wisth example -->
+  <section class="py-5">
+    <figure>
+      <div class="overflow-hidden rounded-0 vh-100">
+        <img-comparison-slider class="m-n1 vh-100">
+          <figure slot="first" class="vh-100">
+            <div class="jarallax py-5 vh-100" data-jarallax data-speed="0.8" style="background: #F4F9FA;">
+              <div class="jarallax-img vh-100"
+                   style="background-image: url(../assets/img/projects/kikoto/brand/logo.svg); background-size: 65%; background-repeat: no-repeat; background-position: center;"></div>
+            </div>
+            <!--          <img src="../assets/img/landing/coworking-space/parallax-image.jpg" alt="Image before">-->
+          </figure>
+          <figure slot="second" class="vh-100">
+            <div class="jarallax py-5 vh-100" data-jarallax data-speed="0.8" style="background: #3E4146">
+              <div class="jarallax-img vh-100"
+                   style="background-image: url(../assets/img/projects/kikoto/brand/logo-light.svg); background-size: 65%; background-repeat: no-repeat; background-position: center;"></div>
+            </div>
+          </figure>
+          <div slot="handle" style="width: 42px;" class="">
+            <svg class="text-dark rounded-circle" width="42" height="42" viewBox="0 0 42 42"
+                 xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <circle fill="currentColor" cx="21" cy="21" r="21" />
+              </g>
+              <path fill="white"
+                    d="M25.5019 19.7494H15.9147V15.9146L11.1211 20.7081L15.9147 25.5017V21.6669H25.5019V25.5017L30.2955 20.7081L25.5019 15.9146V19.7494Z" />
+            </svg>
+          </div>
+        </img-comparison-slider>
+      </div>
+      <figcaption class="text-center text-muted mt-2 px-4" data-key="projects.afinca.logo_figcaption"></figcaption>
+    </figure>
+  </section>
+
+  <!-- UI/UX Design -->
+  <section class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">03</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.ui_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.ui_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.ui_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row position-sm-relative">
+      <div class="offset-sm-1 col-sm-10 col-lg-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.ui_prototype_web"></h3>
+        <figure>
+          <div class="border rounded-1 overflow-hidden">
+            <iframe width="100%" height="auto"
+                    src="https://xd.adobe.com/embed/be9f04c1-31f9-476f-b23a-e3373366d49a-ebcc/?fullscreen"
+                    frameborder="0" allowfullscreen style="aspect-ratio: 1440/900"></iframe>
+          </div>
+          <figcaption class="text-center text-muted mt-2 px-4"
+                      data-key="projects.afinca.ui_figcaption_desktop"></figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+        <a href="https://xd.adobe.com/view/be9f04c1-31f9-476f-b23a-e3373366d49a-ebcc/" target="_blank"
+           class="btn-custom ms-auto">
+          <i class="baicon-arrow-up-right"></i>
+          <span class="btn-text text-uppercase fw-bold" data-key="common.view_prototype"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pb-5 prototype_xd_mobile_section">
+    <div class="row position-sm-relative">
+      <div class="offset-sm-1 col-sm-10 col-lg-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.ui_prototype_mobile"></h3>
+        <div class="row justify-content-center">
+          <div class="col-auto col-sm-12">
+            <figure class="d-block mx-auto prototype_xd_mobile_container">
+              <div class="border rounded-1 overflow-hidden p-sm-5"
+                   style="background: #7bb732;">
+                <iframe class="prototype_xd_mobile" height="100%" width="100%"
+                        src="https://xd.adobe.com/embed/07ddb6b6-ed4a-442d-a7f0-73231d21b3be-528e/?fullscreen"
+                        frameborder="0" allowfullscreen
+                        style="aspect-ratio: 375/812; border-radius: 6px;"
+                ></iframe>
+              </div>
+              <figcaption class="text-center text-muted mt-2 px-4"
+                          data-key="projects.afinca.ui_figcaption_mobile"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+        <a href="https://xd.adobe.com/view/07ddb6b6-ed4a-442d-a7f0-73231d21b3be-528e/" target="_blank"
+           class="btn-custom ms-auto">
+          <i class="baicon-arrow-up-right"></i>
+          <span class="btn-text text-uppercase fw-bold" data-key="common.view_prototype"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voy con prisa -->
+  <section class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">04</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.hurry_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.hurry_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.hurry_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Voy con prisa vídeo -->
+  <section class="container pb-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.hurry_video_title"></h3>
+        <div class="row">
+          <div class="col-12">
+            <figure>
+              <div class="border rounded-1 overflow-hidden p-5"
+                   style="background: linear-gradient(to right, #02a9f4, #288CFC);">
+                <video autoplay loop muted playsinline width="100%"
+                       poster="../assets/img/projects/kikoto/hurry/hurry.mp4"
+                       style="aspect-ratio: 375/812; max-height: 70vh;">
+                  <source src="../assets/img/projects/kikoto/hurry/hurry.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <figcaption class="text-center text-muted mt-2 px-4"
+                          data-key="projects.afinca.hurry_video_figcaption"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voy con prisa CTA -->
+  <figure class="py-5 my-lg-5">
+    <section class="container-fluid position-relative z-1 overflow-x-hidden gx-0">
+      <div class="row" style="min-height: 374px;">
+        <div class="col-11 offset-1 col-xxl-10 offset-xxl-2 position-relative">
+          <img src="../assets/img/projects/kikoto/hurry/hurry-illustration.webp"
+               alt="Ilustración" class="illustration">
+          <svg class="" style="position: absolute; right: 0; bottom: 0; z-index: 1;"
+               xmlns="http://www.w3.org/2000/svg" width="100%" height="82" viewBox="0 0 782 82" fill="none"
+               preserveAspectRatio="none">
+            <path
+              d="M0.707761 181.687L224.816 598.91L575.502 734.54L856.193 8.78494C788.024 -17.7766 27.1572 15.2707 0.707761 181.687Z"
+              fill="var(--bai-light)" fill-opacity="0.2" />
+          </svg>
+          <svg class="" style="position: absolute; right: 0; bottom: 0; z-index: 0;"
+               xmlns="http://www.w3.org/2000/svg" width="100%" height="233" viewBox="0 0 755 233" fill="none"
+               preserveAspectRatio="none">
+            <path
+              d="M833.642 40.5563L838.415 514.135L596.545 802.015L0.767311 301.459C36.3579 137.352 730.247 -92.4981 833.642 40.5563Z"
+              fill="white" fill-opacity="0.2" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="374" viewBox="0 0 838 374" fill="none"
+               preserveAspectRatio="none">
+            <path d="M59.8556 0H838V393H59.8556C-18.4598 237.743 -21.4302 151.627 59.8556 0Z"
+                  fill="url(#paint0_linear_1956_2955)" />
+            <defs>
+              <linearGradient id="paint0_linear_1956_2955" x1="419" y1="3.74933e-06" x2="360" y2="434.5"
+                              gradientUnits="userSpaceOnUse">
+                <stop stop-color="#298cfc" />
+                <stop offset="1" stop-color="#298cfc" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="col-12 wrapper-absolute px-0 z-2 d-none d-md-block">
+          <div class="container px-sm-0 h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col offset-6 offset-lg-6 offset-xl-7 position-relative mh-100"
+                   style="overflow-y: clip;">
+                <div class="pt-5">
+                  <p class="text-white h5">
+                    ¿Desde dónde sales?
+                  </p>
+                  <img src="../assets/img/projects/kikoto/hurry/hurry_es_ES.webp"
+                       alt="Captura de Voy con prisa" class="img-fluid" height="350" width="386">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <figcaption class="text-center text-muted mt-2 px-4" data-key="projects.afinca.hurry_figcaption"></figcaption>
+  </figure>
+
+  <!-- Comunicar con ilustraciones -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">05</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4"
+            data-key="projects.afinca.illustrations_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.illustrations_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.illustrations_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="offset-sm-1 col-sm-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.first_versions"></h3>
+        <div class="row gy-4 mt-0">
+          <div class="col-sm-6">
+            <!-- Image gallery -->
+            <div class="gallery">
+              <a href="../assets/img/projects/kikoto/illustrations/illustrations-1.webp"
+                 class="gallery-item d-block card-hover border">
+                <div
+                  class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 overflow-hidden z-2 opacity-0">
+                  <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+                  <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3"
+                       data-key="common.expand"></div>
+                  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+                </div>
+                <img src="../assets/img/projects/kikoto/illustrations/illustrations-1.webp" class="d-block"
+                     alt="Image caption">
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- Image gallery -->
+            <div class="gallery">
+              <a href="../assets/img/projects/kikoto/illustrations/illustrations-2.webp"
+                 class="gallery-item d-block card-hover border">
+                <div
+                  class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 overflow-hidden z-2 opacity-0">
+                  <i class="baicon-zoom-in fs-2 text-white position-relative z-2"></i>
+                  <div class="position-absolute bottom-0 start-0 w-100 text-center text-white fs-sm fw-medium z-2 pb-3"
+                       data-key="common.expand"></div>
+                  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+                </div>
+                <img src="../assets/img/projects/kikoto/illustrations/illustrations-2.webp" class="d-block"
+                     alt="Image caption">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Illustrations (Infinite slider) -->
+  <section class="pb-5">
+    <!-- First row slider -->
+    <div class="swiper pb-4" data-swiper-options='{
+          "spaceBetween": 24,
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 10000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "500": { "slidesPerView": 3 },
+            "900": { "slidesPerView": 4 },
+            "1300": { "slidesPerView": 5 },
+            "1600": { "slidesPerView": 6 }
+          }
+        }'>
+      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/alcudia.webp"
+                   alt="illustration_alcudia">
+            </div>
+          </div>
+        </div>
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/algeciras.webp"
+                   alt="illustration_algeciras">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/alhucemas.webp"
+                   alt="illustration_alhucemas">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/almeria.webp"
+                   alt="illustration_almeria">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/barcelona.webp"
+                   alt="illustration_barcelona">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/ceuta.webp"
+                   alt="illustration_ceuta">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/ciutadella.webp"
+                   alt="illustration_ciutadella">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/denia.webp"
+                   alt="illustration_denia">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/formentera.webp"
+                   alt="illustration_formentera">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/ghazaouet.webp"
+                   alt="illustration_ghazaouet">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/ibiza.webp"
+                   alt="illustration_ibiza">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Second row slider -->
+    <div class="swiper" dir="rtl" data-swiper-options='{
+          "spaceBetween": 24,
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 10000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "500": { "slidesPerView": 3 },
+            "900": { "slidesPerView": 4 },
+            "1300": { "slidesPerView": 5 },
+            "1600": { "slidesPerView": 6 }
+          }
+        }'>
+      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/mahon.webp"
+                   alt="illustration_mahon">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/malaga.webp"
+                   alt="illustration_malaga">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/melilla.webp"
+                   alt="illustration_melilla">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/mostaganem.webp"
+                   alt="illustration_mostaganem">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/motril.webp"
+                   alt="illustration_motril">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/nador.webp"
+                   alt="illustration_nador">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/oran.webp"
+                   alt="illustration_oran">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/palma.webp"
+                   alt="illustration_palma">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/tanger-med.webp"
+                   alt="illustration_tanger-med">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/tanger-ville.webp"
+                   alt="illustration_tanger-ville">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="card border-0 bg-secondary rounded-4">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1.618">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/illustrations/itineraries/valencia.webp"
+                   alt="illustration_valencia">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Armonía del sistema de diseño en los distribuidores diferentes soportes -->
+  <section class="container py-5 my-lg-5">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+        <h3 class="text-uppercase fs-base fw-bolder">06</h3>
+        <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.stores_title"></h2>
+      </div>
+      <div class="offset-sm-1 col-sm-10">
+        <div class="row align-items-start gx-lg-5">
+          <div class="col-lg-5">
+            <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.stores_subtitle"></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="text-dark fs-xl" data-key="projects.afinca.stores_description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Illustrations (Infinite slider iphone ipad) -->
+  <section class="pb-5 overflow-x-hidden">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.stores_section_ios"></h3>
+      </div>
+    </div>
+    <!-- First row slider -->
+    <div class="swiper pb-4" data-swiper-options='{
+          "spaceBetween": 20,
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 5000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "500": { "slidesPerView": 3 },
+            "900": { "slidesPerView": 4 },
+            "1300": { "slidesPerView": 5 },
+            "1600": { "slidesPerView": 6 }
+          }
+        }'>
+      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_1.webp"
+                   alt="ios_screenshot_1">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_2.webp"
+                   alt="ios_screenshot_2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_3.webp"
+                   alt="ios_screenshot_3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_4.webp"
+                   alt="ios_screenshot_4">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_5.webp"
+                   alt="ios_screenshot_5">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_6.webp"
+                   alt="ios_screenshot_6">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_7.webp"
+                   alt="ios_screenshot_7">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_8.webp"
+                   alt="ios_screenshot_8">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_9.webp"
+                   alt="ios_screenshot_9">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1290/2796">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios/ios_10.webp"
+                   alt="ios_screenshot_10">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper pb-4" data-swiper-options='{
+          "spaceBetween": 20,
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 5000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 1.5 },
+            "500": { "slidesPerView": 2 },
+            "900": { "slidesPerView": 2 },
+            "1300": { "slidesPerView": 3 },
+            "1600": { "slidesPerView": 4 }
+          }
+        }'>
+      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_0.webp"
+                   alt="ios_ipad_screenshot_0">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_1.webp"
+                   alt="ios_ipad_screenshot_1">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_2.webp"
+                   alt="ios_ipad_screenshot_2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_3.webp"
+                   alt="ios_ipad_screenshot_3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_4.webp"
+                   alt="ios_ipad_screenshot_4">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_5.webp"
+                   alt="ios_ipad_screenshot_5">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/810">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_6.webp"
+                   alt="ios_ipad_screenshot_6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Illustrations (Infinite slider android) -->
+  <section class="pb-5 overflow-x-hidden">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10">
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.afinca.stores_section_android"></h3>
+      </div>
+    </div>
+    <!-- First row slider -->
+    <div class="swiper pb-4" data-swiper-options='{
+          "spaceBetween": 20,
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 5000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "500": { "slidesPerView": 3 },
+            "900": { "slidesPerView": 4 },
+            "1300": { "slidesPerView": 5 },
+            "1600": { "slidesPerView": 6 }
+          }
+        }'>
+      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_1.webp"
+                   alt="android_screenshot_1">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_2.webp"
+                   alt="android_screenshot_2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_3.webp"
+                   alt="android_screenshot_3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_4.webp"
+                   alt="android_screenshot_4">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_5.webp"
+                   alt="android_screenshot_5">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_6.webp"
+                   alt="android_screenshot_6">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_7.webp"
+                   alt="android_screenshot_7">
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto">
+          <div class="card border bg-secondary rounded-1">
+            <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
+                 style="aspect-ratio: 1080/2158">
+              <img class="position-absolute w-100 h-100"
+                   src="../assets/img/projects/kikoto/stores/android/android_8.webp"
+                   alt="android_screenshot_8">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- What did I learn? -->
+  <section class="bg-secondary py-5 mt-lg-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+          <h3 class="text-uppercase fs-base fw-bolder">07</h3>
+          <h2 class="main-intro gloock display-2 pb-3 pb-lg-4" data-key="projects.afinca.learn_title"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10">
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.learn_subtitle"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="text-dark fs-xl" data-key="projects.afinca.learn_description"></p>
+            </div>
+          </div>
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.learn_subtitle_2"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="text-dark fs-xl" data-key="projects.afinca.learn_description_2"></p>
+            </div>
+          </div>
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold" data-key="projects.afinca.learn_subtitle_3"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="text-dark fs-xl" data-key="projects.afinca.learn_description_3"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax background image -->
+  <section class="jarallax d-none" data-jarallax data-speed="0.6">
+    <div class="ratio ratio-16x9"></div>
+    <div class="jarallax-img" style="background-image: url(../assets/img/portfolio/single/v2/parallax.jpg);"></div>
+  </section>
+
+  <!-- Testimonials (Carousel) -->
+  <section
+    class="d-none bg-secondary overflow-x-hidden position-relative z-2 py-5 mt-n1 mt-sm-0 mb-1 my-md-3 my-lg-3 my-xl-4 my-xxl-5">
+    <div class="container">
+      <div class="row py-md-4 py-lg-5 gx-lg-5">
+        <div class="col-sm-10 offset-sm-1 offset-lg-0 col-lg-6 order-md-2">
+
+          <!-- Swiper slider -->
+          <div class="swiper" data-swiper-options='{
+              "spaceBetween": 40,
+              "loop": true,
+              "bindedContent": true,
+              "autoHeight": true,
+              "pagination": {
+                "el": ".testimonials-count",
+                "type": "fraction"
+              },
+              "navigation": {
+                "prevEl": "#prev-testimonial",
+                "nextEl": "#next-testimonial"
+              }
+            }'>
+            <div class="swiper-wrapper">
+
+              <!-- Item -->
+              <div class="swiper-slide ps-md-3" data-swiper-binded="#testimonial-1">
+                <div class="d-flex d-md-none pt-3 mb-3">
+                  <i class="baicon-quotes d-md-none text-dark display-3 mt-n2"></i>
+                  <div class="ps-3">
+                    <h3 class="h5 mb-0">José Manuel</h3>
+                    <p class="text-body-secondary mb-0">18 de diciembre de 2023</p>
+                  </div>
+                </div>
+                <h2 class="mb-lg-4">Útil e intuitiva</h2>
+                <p class="lead mb-0">Perfecta, muy útil e intuitiva. Gracias </p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide ps-md-3" data-swiper-binded="#testimonial-2">
+                <div class="d-flex d-md-none pt-3 mb-3">
+                  <i class="baicon-quotes d-md-none text-dark display-3 mt-n2"></i>
+                  <div class="ps-3">
+                    <h3 class="h5 mb-0">Manuel Alba</h3>
+                    <p class="text-body-secondary mb-0">26 de junio de 2023</p>
+                  </div>
+                </div>
+                <h2 class="mb-lg-4">Rápida, eficaz y fiable</h2>
+                <p class="lead mb-0">Su función "Tengo prisa" nos salvó de quedarnos en tierra
+                  por los pelos. Ya podrían las navieras del Estrecho y sus apps aprender de esta magnífica aplicación.
+                  Muy recomendable.</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide ps-md-3" data-swiper-binded="#testimonial-3">
+                <div class="d-flex d-md-none pt-3 mb-3"><i class="baicon-quotes d-md-none text-dark display-3 mt-n2"></i>
+                  <div class="ps-3">
+                    <h3 class="h5 mb-0">África De La Cruz</h3>
+                    <p class="text-body-secondary mb-0">18 de diciembre de 2023</p>
+                  </div>
+                </div>
+                <h2 class="mb-lg-4">Lo mejor y lo más cómodo</h2>
+                <p class="lead mb-0">Lo mejor y lo más cómodo, para poder sacar billetes. Mis felicitaciones.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 offset-sm-1 order-md-1 mt-n3">
+          <i class="baicon-quotes d-none d-md-block text-dark ms-n2 mb-1" style="font-size: 150px;"></i>
+
+          <!-- Contnetn binded to slider (on screens > 768px) -->
+          <div class="binded-content h-auto d-none d-md-block">
+            <div class="binded-item h-auto active" id="testimonial-1">
+              <h3 class="h5 mb-1">José Manuel</h3>
+              <p class="text-body-secondary mb-0">18 de diciembre de 2023</p>
+            </div>
+            <div class="binded-item h-auto" id="testimonial-2">
+              <h3 class="h5 mb-1">Manuel Alba</h3>
+              <p class="text-body-secondary mb-0">26 de junio de 2023</p>
+            </div>
+            <div class="binded-item h-auto" id="testimonial-3">
+              <h3 class="h5 mb-1">África De La Cruz</h3>
+              <p class="text-body-secondary mb-0">18 de diciembre de 2023</p>
+            </div>
+          </div>
+
+          <!-- Swiper controls (Prev / Next)-->
+          <div class="d-flex align-items-center pt-4 my-3">
+            <button class="btn btn-icon btn-sm btn-outline-dark rounded-circle me-3" type="button"
+                    id="prev-testimonial" aria-label="Prev">
+              <i class="baicon-arrow-left"></i>
+            </button>
+            <div class="testimonials-count fw-medium flex-shrink-0 text-center" style="width: 2.5rem;"></div>
+            <button class="btn btn-icon btn-sm btn-outline-dark rounded-circle ms-3" type="button"
+                    id="next-testimonial" aria-label="Next">
+              <i class="baicon-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Trabajemos juntos -->
+  <section id="work-together" class="text-light py-5 bg-dark min-vh-100">
+    <div class="container py-5 my-lg-5">
+      <div class="row">
+        <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
+          <h3 class="text-uppercase display-3 fw-bolder text-light">😃 🚀</h3>
+          <h2 class="main-intro text-light gloock display-2 pb-3 pb-lg-4"
+              data-key="common.let_start_title"></h2>
+        </div>
+        <div class="offset-sm-1 col-sm-10">
+          <div class="row align-items-start gx-lg-5 mb-5">
+            <div class="col-lg-5">
+              <h2 class="h2 pb-2 fw-bold text-light" data-key="common.let_start_subtitle"></h2>
+            </div>
+            <div class="col-lg-7">
+              <p class="fs-xl text-light" data-key="common.let_start_text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other projects -->
+  <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5 d-none">
+    <h2 class="h1 pb-3 pb-lg-4">Next projects</h2>
+    <div class="row row-cols-1 row-cols-sm-2 align-items-end mb-2 pb-md-4">
+      <div class="col">
+        <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 550px;">
+          <div class="zoom-effect-wrapper">
+            <div class="zoom-effect-img">
+              <img src="../assets/img/portfolio/grid/11.jpg" alt="Image">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="../portfolio-single-v2.html">Doe design</a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span>Branding, Stationery</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
+          <div class="zoom-effect-wrapper">
+            <div class="zoom-effect-img">
+              <img src="../assets/img/portfolio/grid/10.jpg" alt="Image">
+            </div>
+          </div>
+          <div class="pt-4 mt-lg-2">
+            <h2 class="h4 mb-2">
+              <a class="stretched-link" href="../portfolio-single-v2.html">D.G.Vent</a>
+            </h2>
+            <div class="d-flex justify-content-between fs-lg text-body-secondary">
+              <span>Stationery design</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<!-- Back to top button -->
+<a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+  <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+  </svg>
+  <i class="baicon-arrow-up"></i>
+</a>
+
+
+<!-- Vendor scripts: JS libraries and plugins -->
+<script src="../assets/vendor/aos/dist/aos.js"></script>
+<script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/lightgallery/lightgallery.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="../assets/vendor/img-comparison-slider/dist/index.js"></script>
+
+<!-- Bootstrap + Theme scripts -->
+<script src="../assets/js/theme.min.js"></script>
+
+<script>
+</script>
+</body>
+</html>
