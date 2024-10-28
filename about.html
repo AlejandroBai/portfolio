@@ -121,12 +121,12 @@
   <header class="navbar navbar-expand-lg fixed-top py-1 py-md-0 bg-transparent">
     <div class="container-fluid px-1 px-sm-2 p-md-3 px-lg-4">
       <a id="home-button" href="index.html"
-         class="btn btn-sm btn-outline-light rounded-pill border-0 ps-2 pe-3 fs-sm text-black">
+         class="btn btn-sm btn-outline-light rounded-pill border-0 ps-2 pe-3 fs-sm">
         <i class="baicon-arrow-left me-2 fs-4"></i>
         <span class="text-uppercase fw-bold" data-key="common.back"></span>
       </a>
       <button type="button" id="languageButton"
-              class="btn btn-sm btn-outline-dark rounded-pill border-0 ms-auto ps-2 pe-3 text-black">
+              class="btn btn-sm btn-outline-dark rounded-pill border-0 ms-auto ps-2 pe-3">
         <i class="baicon-globe me-2 fs-4"></i>
         <span class="text-uppercase fw-bold fs-sm">Español</span>
       </button>
@@ -478,34 +478,36 @@
 
       function toggleHeaderClass() {
         const targetPosition = mainSection.getBoundingClientRect().top
-        const scrollThreshold = 250 // Detecta cuando el #main-section toque la parte superior del viewport
+        const scrollThreshold = 250 // Detecta cuando el #main-section toca la parte superior del viewport
 
-        // Cambia los estilos de los botones cuando #main-section toca el top del viewport
         if (targetPosition <= scrollThreshold) {
-          button1.classList.remove("text-black")
-          button2.classList.remove("text-black")
-          header.classList.remove("bg-transparent")
-          header.classList.add("bg-dark")
+          // Cuando #main-section alcanza la parte superior del viewport
+          if (window.innerWidth < 768) {
+            button1.classList.remove("text-black")
+            button2.classList.remove("text-black")
+            header.classList.remove("bg-transparent")
+            header.classList.add("bg-dark")
+          } else {
+            header.classList.remove("bg-dark")
+            header.classList.add("bg-transparent")
+          }
         } else {
-          button1.classList.add("text-black")
-          button2.classList.add("text-black")
-          header.classList.remove("bg-dark")
-          header.classList.add("bg-transparent")
+          // Cuando #main-section no está en la parte superior del viewport
+          if (window.innerWidth < 768) {
+            button1.classList.add("text-black")
+            button2.classList.add("text-black")
+            header.classList.remove("bg-dark")
+            header.classList.add("bg-transparent")
+          } else {
+            header.classList.add("bg-transparent")
+            header.classList.remove("bg-dark")
+          }
         }
       }
 
       function checkScreenSize() {
-        // Verifica si el ancho de la pantalla es menor a 768px
-        if (window.innerWidth < 768) {
-          window.addEventListener("scroll", toggleHeaderClass)
-          toggleHeaderClass() // Ejecuta inmediatamente para aplicar cambios al cargar
-        } else {
-          // Remueve el evento de scroll si la pantalla es mayor o igual a 768px
-          window.removeEventListener("scroll", toggleHeaderClass)
-          // Asegúrate de restablecer los estilos en pantallas grandes
-          button1.classList.remove("text-black")
-          button2.classList.remove("text-black")
-        }
+        window.addEventListener("scroll", toggleHeaderClass) // Aplica el evento de scroll siempre
+        toggleHeaderClass() // Ejecuta inmediatamente para aplicar cambios al cargar
       }
 
       // Ejecuta la función al cargar

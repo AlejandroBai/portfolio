@@ -7,13 +7,39 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
+  <!-- SEO meta robots -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alexbayosaiz.com">
+
   <!-- SEO meta tags -->
   <title>Álex Bayo Saiz | Kikoto</title>
-  <meta name="description"
-        content="Álex Bayo Saiz - Kikoto, portal de compra de billetes de ferry y producto de software multiplataforma">
-  <meta name="keywords"
-        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer">
+  <meta name="description" data-key="meta.kikoto.description"
+        content="Álex Bayo Saiz - Kikoto, a ferry ticket purchasing portal and cross-platform software, crafted with care and dedication.">
+  <meta name="keywords" data-key="meta.keywords">
   <meta name="author" content="Álex Bayo Saiz">
+
+  <!-- Open Graph metadata for social media sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexbayosaiz.com">
+  <meta property="og:title" content="Álex Bayo Saiz - Kikoto">
+  <meta property="og:description" data-key="meta.kikoto.description">
+  <meta property="og:image" content="https://alexbayosaiz.com/assets/img/about/profile.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@alexbayosaiz">
+  <meta name="twitter:title" content="Álex Bayo Saiz - Kikoto">
+  <meta name="twitter:description" data-key="meta.kikoto.description">
+  <meta name="twitter:image" content="https://alexbayosaiz.com/assets/img/about/profile.jpg">
+
+  <!-- Links a RRSS -->
+  <link rel="me" href="https://www.linkedin.com/in/alexbayosaiz/" type="text/html">
+  <link rel="me" href="https://twitter.com/alexbayosaiz" type="text/html">
+  <link rel="me" href="https://www.instagram.com/alexbayosaiz/" type="text/html">
+
+  <!-- Theme color -->
   <meta name="theme-color" content="#02a9f4">
 
   <!--  Favicon -->
@@ -22,6 +48,27 @@
   <link rel="shortcut icon" href="../assets/img/projects/kikoto/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/projects/kikoto/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="../assets/img/projects/kikoto/favicon/site.webmanifest" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Álex Bayo Saiz",
+      "jobTitle": "Digital Product Designer",
+      "url": "https://alexbayosaiz.com",
+      "image": "https://alexbayosaiz.com/assets/img/about/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/alexbayosaiz/",
+        "https://www.instagram.com/alexbayosaiz/",
+        "https://twitter.com/alexbayosaiz"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      }
+    }
+  </script>
 
   <!-- Import Google font (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -503,16 +550,26 @@
       <div class="offset-sm-1 col-sm-10 col-lg-10">
         <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.kikoto.ui_prototype_web"></h3>
         <figure>
-          <div class="border rounded-1 overflow-hidden">
-            <iframe width="100%" height="auto"
-                    src="https://xd.adobe.com/embed/d77aebbc-2be4-419c-b1d2-81b088037c11-8229/?fullscreen"
-                    frameborder="0" allowfullscreen style="aspect-ratio: 1440/900"></iframe>
+          <div class="border rounded-1 overflow-hidden" id="iframe-container">
+            <!-- Marcador de posición -->
+            <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1440/900; width: 100%">
+              <div class="page-loading active" style="background: linear-gradient(to right, #02a9f4, #288CFC);">
+                <div class="page-loading-inner">
+                  <div class="page-spinner"></div>
+                  <span class="text-white" data-key="common.loading_prototype"></span>
+                </div>
+              </div>
+            </div>
+<!--            <iframe width="100%" height="auto"-->
+<!--                    src="https://xd.adobe.com/embed/d77aebbc-2be4-419c-b1d2-81b088037c11-8229/?fullscreen"-->
+<!--                    frameborder="0" allowfullscreen style="aspect-ratio: 1440/900"></iframe>-->
+
           </div>
           <figcaption class="text-center text-muted mt-2 px-4"
                       data-key="projects.kikoto.ui_figcaption_desktop"></figcaption>
         </figure>
       </div>
-      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4 text-center">
         <a href="https://xd.adobe.com/view/d77aebbc-2be4-419c-b1d2-81b088037c11-8229/" target="_blank"
            class="btn-custom ms-auto">
           <i class="baicon-arrow-up-right"></i>
@@ -529,13 +586,22 @@
         <div class="row justify-content-center">
           <div class="col-auto col-sm-12">
             <figure class="d-block mx-auto prototype_xd_mobile_container">
-              <div class="border rounded-1 overflow-hidden p-sm-5"
+              <div class="border rounded-1 overflow-hidden p-sm-5" id="iframe-container-2"
                    style="background: linear-gradient(to right, #02a9f4, #288CFC);">
-                <iframe class="prototype_xd_mobile" height="100%" width="100%"
-                        src="https://xd.adobe.com/embed/1acfdbc4-953e-4c3e-8d01-203a9e1c4ddf-4f9c/?fullscreen"
-                        frameborder="0" allowfullscreen
-                        style="aspect-ratio: 375/812; border-radius: 6px;"
-                ></iframe>
+                <!-- Marcador de posición -->
+                <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1440/900; width: 100%">
+                  <div class="page-loading active" style="background: linear-gradient(to right, #02a9f4, #288CFC);">
+                    <div class="page-loading-inner">
+                      <div class="page-spinner"></div>
+                      <span class="text-white" data-key="common.loading_prototype"></span>
+                    </div>
+                  </div>
+                </div>
+<!--                <iframe class="prototype_xd_mobile" height="100%" width="100%"-->
+<!--                        src="https://xd.adobe.com/embed/1acfdbc4-953e-4c3e-8d01-203a9e1c4ddf-4f9c/?fullscreen"-->
+<!--                        frameborder="0" allowfullscreen-->
+<!--                        style="aspect-ratio: 375/812; border-radius: 6px;"-->
+<!--                ></iframe>-->
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
                           data-key="projects.kikoto.ui_figcaption_mobile"></figcaption>
@@ -586,7 +652,7 @@
                 <div class="video-container d-flex">
                   <video
                     class="responsive-video"
-                    poster=".../assets/img/projects/kikoto/hurry/hurry.mp4"
+                    poster="../assets/img/projects/kikoto/hurry/hurry.mp4"
                     data-video="../assets/img/projects/kikoto/hurry/hurry.mp4"
                     autoplay
                     muted
@@ -1496,7 +1562,7 @@
           <!-- Swiper slider -->
           <div class="swiper" data-swiper-options='{
               "spaceBetween": 40,
-              "loop": true,
+              "loop": false,
               "bindedContent": true,
               "autoHeight": true,
               "pagination": {
@@ -1612,49 +1678,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Other projects -->
-  <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5 d-none">
-    <h2 class="h1 pb-3 pb-lg-4">Next projects</h2>
-    <div class="row row-cols-1 row-cols-sm-2 align-items-end mb-2 pb-md-4">
-      <div class="col">
-        <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 550px;">
-          <div class="zoom-effect-wrapper">
-            <div class="zoom-effect-img">
-              <img src="../assets/img/portfolio/grid/11.jpg" alt="Image">
-            </div>
-          </div>
-          <div class="pt-4 mt-lg-2">
-            <h2 class="h4 mb-2">
-              <a class="stretched-link" href="../portfolio-single-v2.html">Doe design</a>
-            </h2>
-            <div class="d-flex justify-content-between fs-lg text-body-secondary">
-              <span>Branding, Stationery</span>
-              <span>2021</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
-          <div class="zoom-effect-wrapper">
-            <div class="zoom-effect-img">
-              <img src="../assets/img/portfolio/grid/10.jpg" alt="Image">
-            </div>
-          </div>
-          <div class="pt-4 mt-lg-2">
-            <h2 class="h4 mb-2">
-              <a class="stretched-link" href="../portfolio-single-v2.html">D.G.Vent</a>
-            </h2>
-            <div class="d-flex justify-content-between fs-lg text-body-secondary">
-              <span>Stationery design</span>
-              <span>2021</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 
@@ -1680,6 +1703,43 @@
 
 <!-- Bootstrap + Theme scripts -->
 <script src="../assets/js/theme.min.js"></script>
+
+<script>
+  // Función para cargar el iframe
+  function loadIframe() {
+    const iframeContainer = document.getElementById('iframe-container');
+    iframeContainer.innerHTML = `
+            <iframe width="100%" height="auto"
+                    src="https://xd.adobe.com/embed/d77aebbc-2be4-419c-b1d2-81b088037c11-8229/?fullscreen"
+                    frameborder="0" allowfullscreen style="aspect-ratio: 1440/900;"></iframe>`;
+  }
+
+  // Función para cargar el segundo iframe
+  function loadIframe2() {
+    const iframeContainer = document.getElementById('iframe-container-2');
+    iframeContainer.innerHTML = `
+            <iframe class="prototype_xd_mobile" height="100%" width="100%"
+                        src="https://xd.adobe.com/embed/1acfdbc4-953e-4c3e-8d01-203a9e1c4ddf-4f9c/?fullscreen"
+                        frameborder="0" allowfullscreen
+                        style="aspect-ratio: 375/812; border-radius: 6px;"
+                ></iframe>`;
+  }
+
+  // Crear IntersectionObserver para cargar el iframe cuando sea visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadIframe();
+        loadIframe2();
+        observer.disconnect(); // Desconectar después de cargar para no volver a cargar
+      }
+    });
+  });
+
+  // Observa el contenedor del iframe
+  observer.observe(document.getElementById('iframe-container'));
+  observer.observe(document.getElementById('iframe-container-2'));
+</script>
 
 <script>
 </script>

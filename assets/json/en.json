@@ -8,10 +8,14 @@
     },
     "home": {
       "title": "Álex Bayo Saiz | Home"
+    },
+    "kikoto": {
+      "description": "Álex Bayo Saiz - Kikoto, a ferry ticket purchasing portal and cross-platform software, crafted with care and dedication."
     }
   },
   "common": {
     "loading": "Loading...",
+    "loading_prototype": "Loading prototype...",
     "video_no_support": "Your browser does not support the video element.",
     "title": "My portfolio",
     "project_overview": "Featured projects",
@@ -52,7 +56,7 @@
   "projects": {
     "kikoto": {
       "name": "Kikoto",
-      "main_lead": "In the eyes of a traveler, it's a portal for ferry ticket purchases. For me, it's a work created with meticulous attention and dedication.",
+      "main_lead": "A portal for buying ferry tickets, crafted with care and dedication.",
       "introduction": "Building a ferry ticket purchasing portal from scratch.",
       "description": "A few years ago, we embarked on a journey. One of our clients wanted to develop software for ferry ticket sales. At that time, there were already some competitors offering this service, so it was time to aim for excellence and differentiation. <br><br> From that moment, I got to work and began a dedicated design of the entire product. It has been a long journey, but we finally reached our destination. <br><br>Kikoto, the portal dedicated to the online brokerage of ferry ticket bookings from various national ferry operators for domestic and international travel.",
       "action_text": "Go to the website <i class=\"baicon-arrow-right\"></i>",

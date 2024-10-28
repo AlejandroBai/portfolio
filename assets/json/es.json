@@ -8,10 +8,14 @@
     },
     "home": {
       "title": "Álex Bayo Saiz | Inicio"
+    },
+    "kikoto": {
+      "description": "Álex Bayo Saiz - Kikoto, un portal de compra de billetes de ferry y software multiplataforma creado con mimo y dedicación."
     }
   },
   "common": {
     "loading": "Cargando...",
+    "loading_prototype": "Cargando prototipo...",
     "video_no_support": "Tu navegador no soporta el elemento de vídeo.",
     "title": "Mi portafolio",
     "projectOverview": "Proyectos destacados",
@@ -52,7 +56,7 @@
   "projects": {
     "kikoto": {
       "name": "Kikoto",
-      "main_lead": "A los ojos de un viajero, un portal para la compra de billetes de ferry. A los míos, un producto creado con mimo y dedicación.",
+      "main_lead": "Un portal para comprar billetes de ferry creado con mimo y dedicación.",
       "introduction": "Creando de la nada un portal de compra de billetes de ferry.",
       "description": "Hace unos años partimos hacia un viaje. Uno de nuestros clientes quiso realizar un software alrededor de la venta de billetes de ferry. En ese momento había algunas empresas de la competencia que ya ofrecían este servicio, por lo tanto era el momento de buscar la excelencia y la diferenciación. <br><br> Desde este momento me pongo manos a la obra y comienzo un dedicado diseño de todo el producto. Ha sido un largo viaje pero finalmente llegamos a nuestro destino. <br><br>Kikoto, el portal dedicado a la intermediación de la venta online de reservas de billetes de barco de diferentes navieras de ámbito nacional para viajes dentro del territorio nacional e internacional.",
       "action_text": "Ir al sitio web <i class=\"baicon-arrow-right\"></i>",
