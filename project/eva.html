@@ -189,13 +189,13 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark vh-100">
+  <section class="position-relative bg-dark" style="height: -webkit-fill-available;">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: linear-gradient(140deg, #7777DB, #7777DB);"></div>
+      <div class="jarallax-img" style="background: linear-gradient(140deg, #7777DB, #7777DB); z-index: 0;"></div>
     </div>
 
-    <div id="main-hero-img" class="jarallax w-100 ms-auto min-vh-100 position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100 min-vh-100">
+    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
+      <div class="w-100 h-100" style="min-height: 100svh; height: -webkit-fill-available;">
         <div class="jarallax-img d-flex align-items-center align-items-lg-center">
           <div class="container p-4 py-md-5">
             <div class="row justify-content-center">
@@ -234,8 +234,9 @@
       </div>
     </div>
 
-    <div class="jarallax w-100 mx-auto min-vh-100 position-absolute top-0" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
+    <div class="jarallax w-100 mx-auto position-absolute top-0" style="height: -webkit-fill-available; z-index: 0;"
+         data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100">
         <div class="jarallax-img d-flex align-items-lg-center">
           <div class="container d-flex flex-column justify-content-end">
             <div class="row justify-content-center justify-content-lg-start">
@@ -251,7 +252,7 @@
                 </a>
               </div>
             </div>
-            <div class="d-lg-none" style="height: 18vh"></div>
+            <div class="d-lg-none" style="height: 30vh"></div>
           </div>
         </div>
       </div>

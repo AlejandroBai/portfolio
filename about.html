@@ -174,7 +174,7 @@
                           <h4 class="ps-lg-4 mb-1" data-key="about.lead1"></h4>
                           <h4 class="ps-lg-4 mb-1" data-key="about.lead2"></h4>
                           <h4 class="ps-lg-4 mb-1" data-key="about.lead3"></h4>
-                          <div class="d-flex ps-lg-4 mt-5 gap-5">
+                          <div class="d-flex ps-lg-4 mt-5 gap-md-3 gap-xl-4 gap-xxl-5">
                             <!-- Regular solid button -->
                             <a href="https://www.linkedin.com/in/alexbayosaiz/" target="_blank"
                                class="btn btn-outline-secondary btn-icon btn-linkedin" aria-label="LinkedIn">
@@ -187,6 +187,10 @@
                             <a href="https://www.facebook.com/alexbayosaiz/" target="_blank"
                                class="btn btn-outline-secondary btn-icon btn-facebook" aria-label="Facebook">
                               <i class="baicon-facebook"></i>
+                            </a>
+                            <a href="https://github.com/alexbayosaiz" target="_blank"
+                               class="btn btn-outline-secondary btn-icon" aria-label="GitHub">
+                              <i class="baicon-github"></i>
                             </a>
                             <a href="mailto:alexbayosaiz@gmail.com" target="_blank"
                                class="btn btn-outline-secondary btn-icon btn-google" aria-label="Facebook">
@@ -213,7 +217,7 @@
           <h4 class="mb-1" data-key="about.lead1"></h4>
           <h4 class="mb-1" data-key="about.lead2"></h4>
           <h4 class="mb-1" data-key="about.lead3"></h4>
-          <div class="d-flex ps-lg-4 mt-5 gap-5">
+          <div class="d-flex ps-lg-4 mt-5 gap-3 gap-sm-5">
             <!-- Regular solid button -->
             <a href="https://www.linkedin.com/in/alejandro-bayo-saiz-133a9198/" target="_blank"
                class="btn btn-outline-secondary btn-icon btn-linkedin" aria-label="LinkedIn">
@@ -223,9 +227,17 @@
                class="btn btn-outline-secondary btn-icon btn-instagram" aria-label="Instagram">
               <i class="baicon-instagram"></i>
             </a>
+            <a href="https://github.com/alexbayosaiz" target="_blank"
+               class="btn btn-outline-secondary btn-icon" aria-label="GitHub">
+              <i class="baicon-github"></i>
+            </a>
             <a href="https://www.facebook.com/alejandro.bayosaiz/" target="_blank"
                class="btn btn-outline-secondary btn-icon btn-facebook" aria-label="Facebook">
               <i class="baicon-facebook"></i>
+            </a>
+            <a href="mailto:alexbayosaiz@gmail.com" target="_blank"
+               class="btn btn-outline-secondary btn-icon btn-google" aria-label="Facebook">
+              <i class="baicon-mail"></i>
             </a>
           </div>
         </div>
@@ -499,6 +511,8 @@
             header.classList.remove("bg-dark")
             header.classList.add("bg-transparent")
           } else {
+            button1.classList.remove("text-black")
+            button2.classList.remove("text-black")
             header.classList.add("bg-transparent")
             header.classList.remove("bg-dark")
           }

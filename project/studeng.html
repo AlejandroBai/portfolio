@@ -9,11 +9,36 @@
 
   <!-- SEO meta tags -->
   <title>Álex Bayo Saiz | Studeng+</title>
-  <meta name="description"
-        content="Álex Bayo Saiz - Studeng+, aplicación para hacer que el aprendizaje sea emocionante y divertido.">
+  <meta name="description" data-key="meta.studeng.description"
+        content="Álex Bayo Saiz - Studeng+, an app that makes learning exciting and fun.">
   <meta name="keywords"
-        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer">
+        content="portfolio, product design, ui, ux, user experience, project manager, team leader, team leader product design, team leader product designer"
+        data-key="meta.keywords"
+  >
   <meta name="author" content="Álex Bayo Saiz">
+
+  <!-- Open Graph metadata for social media sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexbayosaiz.com">
+  <meta property="og:title" content="Álex Bayo Saiz - Kikoto">
+  <meta property="og:description" data-key="meta.kikoto.description">
+  <meta property="og:image" content="https://alexbayosaiz.com/assets/img/about/profile.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@alexbayosaiz">
+  <meta name="twitter:title" content="Álex Bayo Saiz - Kikoto">
+  <meta name="twitter:description" data-key="meta.kikoto.description">
+  <meta name="twitter:image" content="https://alexbayosaiz.com/assets/img/about/profile.jpg">
+
+  <!-- Links a RRSS -->
+  <link rel="me" href="https://www.linkedin.com/in/alexbayosaiz/" type="text/html">
+  <link rel="me" href="https://twitter.com/alexbayosaiz" type="text/html">
+  <link rel="me" href="https://www.instagram.com/alexbayosaiz/" type="text/html">
+
+  <!-- Theme color -->
   <meta name="theme-color" content="#006e39">
 
   <!--  Favicon -->
@@ -23,8 +48,26 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/projects/studeng/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="../assets/img/projects/studeng/favicon/site.webmanifest" />
 
-  <!-- Theme switcher (color modes) -->
-  <script src="../assets/js/theme-switcher.js"></script>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Álex Bayo Saiz",
+      "jobTitle": "Digital Product Designer",
+      "url": "https://alexbayosaiz.com",
+      "image": "https://alexbayosaiz.com/assets/img/about/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/alexbayosaiz/",
+        "https://www.instagram.com/alexbayosaiz/",
+        "https://twitter.com/alexbayosaiz"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      }
+    }
+  </script>
 
   <!-- Import Google font (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,105 +86,6 @@
 
   <!-- Theme styles + Bootstrap -->
   <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
-
-  <!-- Page loading styles -->
-  <style>
-      .page-loading {
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          -webkit-transition: all .4s .2s ease-in-out;
-          transition: all .4s .2s ease-in-out;
-          background-color: #fff;
-          opacity: 0;
-          visibility: hidden;
-          z-index: 9999;
-      }
-
-      [data-bs-theme="dark"] .page-loading {
-          background-color: #121519;
-      }
-
-      .page-loading.active {
-          opacity: 1;
-          visibility: visible;
-      }
-
-      .page-loading-inner {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 100%;
-          text-align: center;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          -webkit-transition: opacity .2s ease-in-out;
-          transition: opacity .2s ease-in-out;
-          opacity: 0;
-      }
-
-      .page-loading.active > .page-loading-inner {
-          opacity: 1;
-      }
-
-      .page-loading-inner > span {
-          display: block;
-          font-family: "Inter", sans-serif;
-          font-size: 1rem;
-          font-weight: normal;
-          color: #6f788b;
-      }
-
-      [data-bs-theme="dark"] .page-loading-inner > span {
-          color: #fff;
-          opacity: .6;
-      }
-
-      .page-spinner {
-          display: inline-block;
-          width: 2.75rem;
-          height: 2.75rem;
-          margin-bottom: .75rem;
-          vertical-align: text-bottom;
-          background-color: #d7dde2;
-          border-radius: 50%;
-          opacity: 0;
-          -webkit-animation: spinner .75s linear infinite;
-          animation: spinner .75s linear infinite;
-      }
-
-      [data-bs-theme="dark"] .page-spinner {
-          background-color: rgba(255, 255, 255, .25);
-      }
-
-      @-webkit-keyframes spinner {
-          0% {
-              -webkit-transform: scale(0);
-              transform: scale(0);
-          }
-          50% {
-              opacity: 1;
-              -webkit-transform: none;
-              transform: none;
-          }
-      }
-
-      @keyframes spinner {
-          0% {
-              -webkit-transform: scale(0);
-              transform: scale(0);
-          }
-          50% {
-              opacity: 1;
-              -webkit-transform: none;
-              transform: none;
-          }
-      }
-  </style>
 
   <!-- Page loading scripts -->
   <script>
@@ -165,7 +109,7 @@
 <div class="page-loading active">
   <div class="page-loading-inner">
     <div class="page-spinner"></div>
-    <span>Loading...</span>
+    <span data-key="common.loading"></span>
   </div>
 </div>
 
@@ -189,13 +133,13 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark vh-100">
+  <section class="position-relative bg-dark" style="height: -webkit-fill-available;">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: linear-gradient(140deg, #006d39, #006d39);"></div>
+      <div class="jarallax-img" style="background: linear-gradient(140deg, #006d39, #006d39); z-index: 0;"></div>
     </div>
 
-    <div id="main-hero-img" class="jarallax w-100 ms-auto min-vh-100 position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100 min-vh-100">
+    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
+      <div class="w-100 h-100" style="min-height: 100svh; height: -webkit-fill-available;">
         <div class="jarallax-img d-flex align-items-center align-items-lg-center">
           <div class="container p-4 py-md-5">
             <div class="row justify-content-center">
@@ -229,8 +173,9 @@
       </div>
     </div>
 
-    <div class="jarallax w-100 mx-auto min-vh-100 position-absolute top-0" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
+    <div class="jarallax w-100 mx-auto position-absolute top-0" style="height: -webkit-fill-available; z-index: 0;"
+         data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100">
         <div class="jarallax-img d-flex align-items-lg-center">
           <div class="container d-flex flex-column justify-content-end">
             <div class="row justify-content-center justify-content-lg-start">
@@ -246,7 +191,7 @@
                 </a>
               </div>
             </div>
-            <div class="d-lg-none" style="height: 18vh"></div>
+            <div class="d-lg-none" style="height: 30vh"></div>
           </div>
         </div>
       </div>

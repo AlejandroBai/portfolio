@@ -15,7 +15,10 @@
   <title>Álex Bayo Saiz | Kikoto</title>
   <meta name="description" data-key="meta.kikoto.description"
         content="Álex Bayo Saiz - Kikoto, a ferry ticket purchasing portal and cross-platform software, crafted with care and dedication.">
-  <meta name="keywords" data-key="meta.keywords">
+  <meta name="keywords"
+        content="product design, interface design, interactive design, user experience, user interface, web design, responsive design, team leader, usability, user research"
+        data-key="meta.keywords"
+  >
   <meta name="author" content="Álex Bayo Saiz">
 
   <!-- Open Graph metadata for social media sharing -->
@@ -133,13 +136,13 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark vh-100">
+  <section class="position-relative bg-dark" style="height: -webkit-fill-available;">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: linear-gradient(140deg, #02a9f4, #298cfc);"></div>
+      <div class="jarallax-img" style="background: linear-gradient(180deg, #02a9f4, #298cfc); z-index: 0;"></div>
     </div>
 
-    <div id="main-hero-img" class="jarallax w-100 ms-auto min-vh-100 position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100 min-vh-100">
+    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
+      <div class="w-100 h-100" style="min-height: 100svh; height: -webkit-fill-available;">
         <div class="jarallax-img d-flex align-items-center align-items-lg-center">
           <div class="container p-4 py-md-5">
             <div class="row justify-content-center">
@@ -155,8 +158,8 @@
       </div>
     </div>
 
-    <div class="jarallax w-100 mx-auto min-vh-100 position-absolute top-0" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
+    <div class="jarallax w-100 mx-auto position-absolute top-0" style="height: -webkit-fill-available; z-index: 0;" data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100">
         <div class="jarallax-img d-flex align-items-lg-center">
           <div class="container d-flex flex-column justify-content-end">
             <div class="row justify-content-center justify-content-lg-start">
@@ -172,7 +175,7 @@
                 </a>
               </div>
             </div>
-            <div class="d-lg-none" style="height: 18vh"></div>
+            <div class="d-lg-none" style="height: 30vh"></div>
           </div>
         </div>
       </div>
@@ -194,7 +197,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5">
+  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 1000;">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -597,11 +600,6 @@
                     </div>
                   </div>
                 </div>
-<!--                <iframe class="prototype_xd_mobile" height="100%" width="100%"-->
-<!--                        src="https://xd.adobe.com/embed/1acfdbc4-953e-4c3e-8d01-203a9e1c4ddf-4f9c/?fullscreen"-->
-<!--                        frameborder="0" allowfullscreen-->
-<!--                        style="aspect-ratio: 375/812; border-radius: 6px;"-->
-<!--                ></iframe>-->
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
                           data-key="projects.kikoto.ui_figcaption_mobile"></figcaption>
@@ -609,7 +607,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4 text-center">
         <a href="https://xd.adobe.com/view/1acfdbc4-953e-4c3e-8d01-203a9e1c4ddf-4f9c/" target="_blank"
            class="btn-custom ms-auto">
           <i class="baicon-arrow-up-right"></i>
@@ -647,12 +645,17 @@
         <div class="row">
           <div class="col-12">
             <figure>
-              <div class="border rounded-1 overflow-hidden p-5"
+              <div class="border rounded-1 overflow-hidden p-5 d-lg-none"
                    style="background: linear-gradient(to right, #02a9f4, #288CFC);">
+                <div class="d-nline-flex position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
+                  <a href="https://alexbayosaiz.com/assets/img/projects/kikoto/hurry/hurry.mp4" class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
+                    <i class="baicon-play-filled"></i>
+                  </a>
+                </div>
                 <div class="video-container d-flex">
                   <video
                     class="responsive-video"
-                    poster="../assets/img/projects/kikoto/hurry/hurry.mp4"
+                    poster="../assets/img/projects/kikoto/stores/ios/ios_4.webp"
                     data-video="../assets/img/projects/kikoto/hurry/hurry.mp4"
                     autoplay
                     muted
@@ -664,9 +667,9 @@
                   </video>
                   <img
                     class="poster-image"
-                    src="../assets/img/projects/studeng/poster-studeng.jpg"
+                    src="../assets/img/projects/kikoto/stores/ios/ios_4.webp"
                     alt="Póster del video"
-                    style="display: none;"
+                    style="display: none; aspect-ratio: 375/812; max-height: 70vh; margin: 0 auto;"
                   />
                 </div>
               </div>
@@ -1695,9 +1698,9 @@
 <script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
 <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="../assets/vendor/lightgallery/lightgallery.min.js"></script>
-<script src="../assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
 <script src="../assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
 <script src="../assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="../assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
 <script src="../assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
 <script src="../assets/vendor/img-comparison-slider/dist/index.js"></script>
 
@@ -1739,6 +1742,19 @@
   // Observa el contenedor del iframe
   observer.observe(document.getElementById('iframe-container'));
   observer.observe(document.getElementById('iframe-container-2'));
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const galleryElement = document.querySelector('.gallery');
+    if (galleryElement) {
+      lightGallery(galleryElement, {
+        plugins: [lgFullscreen, lgVideo, lgThumbnail],
+        licenseKey: 'your_license_key', // Reemplaza esto si tienes una clave de licencia
+        speed: 500,
+        videojs: true
+      });
+    }
+  });
+
 </script>
 
 <script>

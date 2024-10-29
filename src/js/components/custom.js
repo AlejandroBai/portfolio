@@ -225,6 +225,7 @@ function updateHeaderClasses() {
   }
 }
 
+// Comportamiento para los vídeos
 document.addEventListener('DOMContentLoaded', function () {
   function isMobileDevice() {
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -240,13 +241,26 @@ document.addEventListener('DOMContentLoaded', function () {
   videoContainers.forEach(function (container) {
     const video = container.querySelector('.responsive-video')
     const poster = container.querySelector('.poster-image')
-
+    const playButton = container.querySelector('.play-button')
     if (isMobile) {
       // En dispositivos móviles
       // Removemos el elemento de video para evitar la carga
       video.parentNode.removeChild(video)
       // Mostramos la imagen de póster
       poster.style.display = 'block'
+      // Agregamos el evento de clic al botón play
+      if (playButton) {
+        playButton.addEventListener('click', function (event) {
+          event.preventDefault()
+          const videoSrc = playButton.getAttribute('href')
+          if (videoSrc) {
+            // Abre el vídeo en una nueva pestaña o ventana del navegador
+            // window.open(videoSrc, '_blank')
+            // Reproduce el vídeo
+            video.play()
+          }
+        })
+      }
     } else {
       // En dispositivos de escritorio
       // Añadimos dinámicamente el elemento source
