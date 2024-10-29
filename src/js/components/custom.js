@@ -152,79 +152,6 @@ function updateJarallaxSpeed() {
   }
 }
 
-const header = document.querySelector('header.navbar')
-const mainSection = document.querySelector('#main-section') // Sección principal
-const footerSection = document.querySelector('#work-together') // Última sección (footer)
-const scrollThreshold1 = 100 // Umbral para cuando el elemento toque la parte superior del viewport
-const scrollThreshold2 = 30 // Umbral para cuando el elemento toque la parte superior del viewport
-
-if (window.location.pathname.startsWith('/project/')) {
-  window.addEventListener('scroll', updateHeaderClasses)
-  window.addEventListener('resize', updateHeaderClasses)
-  updateHeaderClasses()
-}
-
-function updateHeaderClasses() {
-  let mainPosition = null
-  let footerPosition = null
-
-  if (mainSection) {
-    mainPosition = mainSection.getBoundingClientRect().top
-  }
-
-  if (footerSection) {
-    footerPosition = footerSection.getBoundingClientRect().top
-  }
-
-  // EN PANTALLAS MAYORES A 576PX Y SIN data-bs-theme = dark
-  if (window.innerWidth >= 576) {
-    header.classList.remove('bg-light', 'border-bottom')
-    header.classList.add('bg-transparent')
-    if (header.getAttribute('data-initial-bs-theme') !== 'dark') {
-      header.setAttribute('data-bs-theme', 'light')
-    }
-    // Si hemos llegado a la sección #main-section, pero aún no al footer
-    if (
-      mainPosition !== null &&
-      mainPosition <= scrollThreshold1 &&
-      (footerPosition === null || footerPosition > scrollThreshold2)
-    ) {
-      header.setAttribute('data-bs-theme', 'light')
-    } else {
-      if (header.getAttribute('data-initial-bs-theme') === 'dark') {
-        header.setAttribute('data-bs-theme', 'dark')
-      } else {
-        header.setAttribute('data-bs-theme', 'light')
-      }
-    }
-
-    if (footerPosition !== null && footerPosition <= scrollThreshold2) {
-      if (header.getAttribute('data-initial-bs-theme') === 'light') {
-        header.setAttribute('data-bs-theme', 'dark')
-        const buttons = document.querySelectorAll('.btn-outline-dark') // Ajusta el selector si es necesario
-        buttons.forEach((button) => button.classList.remove('text-black'))
-      }
-    }
-  } else {
-    // EN PANTALLAS MENORES A 576PX
-    if (mainPosition !== null && mainPosition <= scrollThreshold1) {
-      // Si hemos llegado a la sección #main-section
-      header.setAttribute('data-bs-theme', 'light') // Botones negros
-      header.classList.remove('bg-transparent')
-      header.classList.add('bg-light', 'border-bottom')
-    } else {
-      // Si estamos por encima de la sección #main-section o mainPosition es null
-      if (header.getAttribute('data-initial-bs-theme') === 'light') {
-        header.setAttribute('data-bs-theme', 'light') // Cambia 'dark' a 'light'
-      } else {
-        header.setAttribute('data-bs-theme', 'dark') // Cambia 'dark' a 'light'
-      }
-      header.classList.remove('bg-light', 'border-bottom')
-      header.classList.add('bg-transparent')
-    }
-  }
-}
-
 // Comportamiento para los vídeos
 document.addEventListener('DOMContentLoaded', function () {
   function isMobileDevice() {
@@ -277,4 +204,88 @@ document.addEventListener('DOMContentLoaded', function () {
       video.play()
     }
   })
+
+  //   Para la section HERO, aplicar diferente propiedad de height según el tipo de dispositivo
+  if (isMobile) {
+    document.querySelector('.hero-section').classList.add('mobile')
+    document.querySelector('.hero-section').classList.remove('min-vh-100')
+  } else {
+    document.querySelector('.hero-section').classList.add('desktop')
+    document.querySelector('.hero-section').classList.add('min-vh-100')
+  }
 })
+
+const header = document.querySelector('header.navbar')
+const mainSection = document.querySelector('#main-section') // Sección principal
+const footerSection = document.querySelector('#work-together') // Última sección (footer)
+const scrollThreshold1 = 100 // Umbral para cuando el elemento toque la parte superior del viewport
+const scrollThreshold2 = 30 // Umbral para cuando el elemento toque la parte superior del viewport
+
+if (window.location.pathname.startsWith('/project/')) {
+  window.addEventListener('scroll', updateHeaderClasses)
+  window.addEventListener('resize', updateHeaderClasses)
+  updateHeaderClasses()
+}
+
+function updateHeaderClasses() {
+  let mainPosition = null
+  let footerPosition = null
+
+  if (mainSection) {
+    mainPosition = mainSection.getBoundingClientRect().top
+  }
+
+  if (footerSection) {
+    footerPosition = footerSection.getBoundingClientRect().top
+  }
+
+  // EN PANTALLAS MAYORES A 576PX Y SIN data-bs-theme = dark
+  if (window.innerWidth >= 576) {
+    header.classList.remove('bg-light', 'border-bottom')
+    header.classList.add('bg-transparent')
+    if (header.getAttribute('data-initial-bs-theme') === 'dark') {
+      header.setAttribute('data-bs-theme', 'dark')
+    } else {
+      header.setAttribute('data-bs-theme', 'light')
+    }
+    // Si hemos llegado a la sección #main-section, pero aún no al footer
+    if (
+      mainPosition !== null &&
+      mainPosition <= scrollThreshold1 &&
+      (footerPosition === null || footerPosition > scrollThreshold2)
+    ) {
+      header.setAttribute('data-bs-theme', 'light')
+    } else {
+      if (header.getAttribute('data-initial-bs-theme') === 'dark') {
+        header.setAttribute('data-bs-theme', 'dark')
+      } else {
+        header.setAttribute('data-bs-theme', 'light')
+      }
+    }
+
+    if (footerPosition !== null && footerPosition <= scrollThreshold2) {
+      if (header.getAttribute('data-initial-bs-theme') === 'light') {
+        header.setAttribute('data-bs-theme', 'dark')
+        const buttons = document.querySelectorAll('.btn-outline-dark') // Ajusta el selector si es necesario
+        buttons.forEach((button) => button.classList.remove('text-black'))
+      }
+    }
+  } else {
+    // EN PANTALLAS MENORES A 576PX
+    if (mainPosition !== null && mainPosition <= scrollThreshold1) {
+      // Si hemos llegado a la sección #main-section
+      header.setAttribute('data-bs-theme', 'light') // Botones negros
+      header.classList.remove('bg-transparent')
+      header.classList.add('bg-light', 'border-bottom')
+    } else {
+      // Si estamos por encima de la sección #main-section o mainPosition es null
+      if (header.getAttribute('data-initial-bs-theme') === 'light') {
+        header.setAttribute('data-bs-theme', 'light') // Cambia 'dark' a 'light'
+      } else {
+        header.setAttribute('data-bs-theme', 'dark') // Cambia 'dark' a 'light'
+      }
+      header.classList.remove('bg-light', 'border-bottom')
+      header.classList.add('bg-transparent')
+    }
+  }
+}

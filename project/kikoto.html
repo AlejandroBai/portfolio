@@ -9,7 +9,7 @@
 
   <!-- SEO meta robots -->
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://alexbayosaiz.com">
+  <link rel="canonical" href="https://alexbayosaiz.com/project/kikoto">
 
   <!-- SEO meta tags -->
   <title>Álex Bayo Saiz | Kikoto</title>
@@ -26,22 +26,22 @@
   <!-- Open Graph metadata for social media sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alexbayosaiz.com/project/kikoto">
-  <meta property="og:title" content="Álex Bayo Saiz - Kikoto">
+  <meta property="og:title" content="Álex Bayo Saiz | Kikoto">
   <meta property="og:description"
         content="Álex Bayo Saiz - Kikoto, a ferry ticket purchasing portal and cross-platform software, crafted with care and dedication."
         data-key="meta.kikoto.description">
-  <meta property="og:image" content="https://alexbayosaiz.com/assets/img/project/kikoto/stores/ios_ipad/ios_ipad_0.webp">
+  <meta property="og:image" content="https://alexbayosaiz.com/assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_0.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
 
   <!-- Twitter metadata -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@alexbayosaiz">
-  <meta name="twitter:title" content="Álex Bayo Saiz - Kikoto">
+  <meta name="twitter:title" content="Álex Bayo Saiz | Kikoto">
   <meta name="twitter:description"
         content="Álex Bayo Saiz - Kikoto, a ferry ticket purchasing portal and cross-platform software, crafted with care and dedication."
         data-key="meta.kikoto.description">
-  <meta name="twitter:image" content="https://alexbayosaiz.com/assets/img/project/kikoto/stores/ios_ipad/ios_ipad_0.webp">
+  <meta name="twitter:image" content="https://alexbayosaiz.com/assets/img/projects/kikoto/stores/ios_ipad/ios_ipad_0.webp">
 
   <!-- Links a RRSS -->
   <link rel="me" href="https://www.linkedin.com/in/alexbayosaiz/" type="text/html">
@@ -142,13 +142,13 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark" style="height: -webkit-fill-available;">
+  <section class="position-relative bg-dark min-vh-100 hero-section">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
       <div class="jarallax-img" style="background: linear-gradient(180deg, #02a9f4, #298cfc); z-index: 0;"></div>
     </div>
 
     <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100" style="min-height: 100svh; height: -webkit-fill-available;">
+      <div class="w-100 h-100" style="min-height: 100svh;">
         <div class="jarallax-img d-flex align-items-center align-items-lg-center">
           <div class="container p-4 py-md-5">
             <div class="row justify-content-center">
@@ -164,8 +164,8 @@
       </div>
     </div>
 
-    <div class="jarallax w-100 mx-auto position-absolute top-0" style="height: -webkit-fill-available; z-index: 0;" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100">
+    <div class="jarallax w-100 mx-auto position-absolute top-0" style="z-index: 0;" data-jarallax data-speed="-0.2">
+      <div class="w-100 h-100 min-vh-100">
         <div class="jarallax-img d-flex align-items-lg-center">
           <div class="container d-flex flex-column justify-content-end">
             <div class="row justify-content-center justify-content-lg-start">
@@ -203,7 +203,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 1000;">
+  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 100;">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -591,7 +591,7 @@
   <section class="container pb-5 prototype_xd_mobile_section">
     <div class="row position-sm-relative">
       <div class="offset-sm-1 col-sm-10 col-lg-10">
-        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.kikoto.ui_prototype_mobile"></h3>
+        <h3 class="text-uppercase fs-base fw-bolder text-nowrap" data-key="projects.kikoto.ui_prototype_mobile"></h3>
         <div class="row justify-content-center">
           <div class="col-auto col-sm-12">
             <figure class="d-block mx-auto prototype_xd_mobile_container">
@@ -806,14 +806,18 @@
   </section>
 
   <!-- Illustrations (Infinite slider) -->
-  <section class="pb-5">
+  <section class="pb-5 pe-none">
     <!-- First row slider -->
-    <div class="swiper pb-4" data-swiper-options='{
+    <div class="swiper pb-4 pe-none" data-swiper-options='{
           "spaceBetween": 24,
           "loop": true,
           "grabCursor": false,
           "centeredSlides": true,
+          "allowTouchMove": false,
+          "preventClicks": true,
+          "preventClicksPropagation": true,
           "autoplay": {
+            "enabled": true,
             "delay": 0,
             "disableOnInteraction": false
           },
@@ -821,17 +825,21 @@
           "speed": 10000,
           "freeModeMomentum": false,
           "breakpoints": {
-            "0": { "slidesPerView": 2 },
+            "0": { "slidesPerView": 2, "autoplay": {
+            "enabled": true,
+            "delay": 0,
+            "disableOnInteraction": false
+          } },
             "500": { "slidesPerView": 3 },
             "900": { "slidesPerView": 4 },
             "1300": { "slidesPerView": 5 },
             "1600": { "slidesPerView": 6 }
           }
         }'>
-      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+      <div class="swiper-wrapper pe-none" style="transition-timing-function: linear !important;">
 
         <!-- Item -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -842,7 +850,7 @@
           </div>
         </div>
         <!-- Item -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -854,7 +862,7 @@
         </div>
 
         <!-- Item -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -866,7 +874,7 @@
         </div>
 
         <!-- Item -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -877,7 +885,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -888,7 +896,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -899,7 +907,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -910,7 +918,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -921,7 +929,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -932,7 +940,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -943,7 +951,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -958,11 +966,14 @@
     </div>
 
     <!-- Second row slider -->
-    <div class="swiper" dir="rtl" data-swiper-options='{
+    <div class="swiper pe-none" dir="rtl" data-swiper-options='{
           "spaceBetween": 24,
           "loop": true,
           "grabCursor": false,
           "centeredSlides": true,
+          "allowTouchMove": false,
+          "preventClicks": true,
+          "preventClicksPropagation": true,
           "autoplay": {
             "delay": 0,
             "disableOnInteraction": false
@@ -978,9 +989,9 @@
             "1600": { "slidesPerView": 6 }
           }
         }'>
-      <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+      <div class="swiper-wrapper pe-none" style="transition-timing-function: linear !important;">
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -991,7 +1002,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1002,7 +1013,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1013,7 +1024,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1024,7 +1035,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1035,7 +1046,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1046,7 +1057,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1057,7 +1068,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1068,7 +1079,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1079,7 +1090,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1090,7 +1101,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide h-auto pe-none">
           <div class="card border-0 bg-secondary rounded-4">
             <div class="card-body p-0 rounded-1 overflow-hidden object-fit-cover position-relative"
                  style="aspect-ratio: 1.618">
@@ -1748,18 +1759,6 @@
   // Observa el contenedor del iframe
   observer.observe(document.getElementById('iframe-container'));
   observer.observe(document.getElementById('iframe-container-2'));
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const galleryElement = document.querySelector('.gallery');
-    if (galleryElement) {
-      lightGallery(galleryElement, {
-        plugins: [lgFullscreen, lgVideo, lgThumbnail],
-        licenseKey: 'your_license_key', // Reemplaza esto si tienes una clave de licencia
-        speed: 500,
-        videojs: true
-      });
-    }
-  });
 
 </script>
 
