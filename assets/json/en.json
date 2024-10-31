@@ -29,6 +29,7 @@
     "loading": "Loading...",
     "loading_prototype": "Loading prototype...",
     "video_no_support": "Your browser does not support the video element.",
+    "video_poster": "Video thumbnail",
     "title": "My portfolio",
     "project_overview": "Featured projects",
     "scroll": "Scroll to see more",

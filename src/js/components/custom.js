@@ -102,119 +102,7 @@ function updateLanguageButton(lang) {
 
 ////////////////////////////////////////////////////////////////
 
-// Selecciona el div que contiene la imagen
-const rotateTarget = document.getElementById('rotate-target')
-const innerImages = document.querySelectorAll('.inner-image')
-
-// Añadir un event listener para el scroll
-window.addEventListener('scroll', function () {
-  if (window.location.pathname.endsWith('kikoto.html')) {
-    // Obtener la cantidad de scroll vertical (lo lejos que estás de la parte superior de la página)
-    const scrollY = window.scrollY
-
-    // Calcular la rotación basada en la cantidad de scroll (ajusta el valor de multiplicación según el efecto que quieras)
-    const rotation = scrollY * 0.01 // Ajusta este valor para un efecto más o menos pronunciado
-    const scale = scrollY * 0.0005 // Ajusta este valor para un efecto más o menos pronunciado
-    const translate = scrollY * 0.1 // Ajusta este valor para un efecto más o menos pronunciado
-
-    // Aplicar la rotación al div
-    rotateTarget.style.transform = `rotate(${rotation}deg) scale(${1 - scale})`
-
-    // Aplicar transformaciones a cada imagen
-    innerImages.forEach(function (image) {
-      image.style.transform = `rotate(${-rotation}deg) scale(${
-        1 + scale
-      }) translateX(-${translate * 7}px)`
-    })
-  }
-  updateJarallaxSpeed()
-})
-
-function updateJarallaxSpeed() {
-  const jarallaxElement = document.getElementById('main-hero-img')
-
-  // Verificar si el elemento jarallax existe
-  if (window.location.pathname.startsWith('/project/') && !jarallaxElement) {
-    console.error('Jarallax element not found')
-    return
-  }
-
-  if (window.location.pathname.startsWith('/project/')) {
-    // Verificar el tamaño de la pantalla y ajustar el valor de data-speed
-    if (window.innerWidth < 768) {
-      jarallaxElement.setAttribute('data-speed', '-0.2') // Para pantallas pequeñas (móviles)
-    } else {
-      jarallaxElement.setAttribute('data-speed', '0.2') // Para pantallas grandes (desktops)
-    }
-    // Destruir la instancia existente de jarallax para reiniciarla con el nuevo valor
-    jarallax(jarallaxElement, 'destroy') // Destruye la instancia actual
-    jarallax(jarallaxElement) // Reinicializa jarallax con el nuevo atributo data-speed
-  }
-}
-
-// Comportamiento para los vídeos
-document.addEventListener('DOMContentLoaded', function () {
-  function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  }
-
-  const isMobile = isMobileDevice()
-
-  // Seleccionamos todos los contenedores de video
-  const videoContainers = document.querySelectorAll('.video-container')
-
-  videoContainers.forEach(function (container) {
-    const video = container.querySelector('.responsive-video')
-    const poster = container.querySelector('.poster-image')
-    const playButton = container.querySelector('.play-button')
-    if (isMobile) {
-      // En dispositivos móviles
-      // Removemos el elemento de video para evitar la carga
-      video.parentNode.removeChild(video)
-      // Mostramos la imagen de póster
-      poster.style.display = 'block'
-      // Agregamos el evento de clic al botón play
-      if (playButton) {
-        playButton.addEventListener('click', function (event) {
-          event.preventDefault()
-          const videoSrc = playButton.getAttribute('href')
-          if (videoSrc) {
-            // Abre el vídeo en una nueva pestaña o ventana del navegador
-            // window.open(videoSrc, '_blank')
-            // Reproduce el vídeo
-            video.play()
-          }
-        })
-      }
-    } else {
-      // En dispositivos de escritorio
-      // Añadimos dinámicamente el elemento source
-      const source = document.createElement('source')
-      source.src = video.getAttribute('data-video')
-      source.type = 'video/mp4' // Ajusta el tipo si usas otro formato
-      video.appendChild(source)
-      video.setAttribute('class', 'responsive-video')
-      video.setAttribute('autoplay', '')
-      video.setAttribute('muted', '')
-      video.setAttribute('playsinline', '')
-      // Removemos la imagen de póster
-      poster.parentNode.removeChild(poster)
-      video.play()
-    }
-  })
-
-  //   Para la section HERO, aplicar diferente propiedad de height según el tipo de dispositivo
-  if (isMobile) {
-    document.querySelector('.hero-section').classList.add('mobile')
-    document.querySelector('.hero-section').classList.remove('min-vh-100')
-  } else {
-    document.querySelector('.hero-section').classList.add('desktop')
-    document.querySelector('.hero-section').classList.add('min-vh-100')
-  }
-})
-
+// HEADER
 const header = document.querySelector('header.navbar')
 const mainSection = document.querySelector('#main-section') // Sección principal
 const footerSection = document.querySelector('#work-together') // Última sección (footer)
@@ -228,16 +116,8 @@ if (window.location.pathname.startsWith('/project/')) {
 }
 
 function updateHeaderClasses() {
-  let mainPosition = null
-  let footerPosition = null
-
-  if (mainSection) {
-    mainPosition = mainSection.getBoundingClientRect().top
-  }
-
-  if (footerSection) {
-    footerPosition = footerSection.getBoundingClientRect().top
-  }
+  let mainPosition = mainSection?.getBoundingClientRect().top || null
+  let footerPosition = footerSection?.getBoundingClientRect().top || null
 
   // EN PANTALLAS MAYORES A 576PX Y SIN data-bs-theme = dark
   if (window.innerWidth >= 576) {
@@ -289,3 +169,125 @@ function updateHeaderClasses() {
     }
   }
 }
+
+const rotateTarget = document.getElementById('rotate-target')
+const innerImages = document.querySelectorAll('.inner-image')
+
+function updateJarallaxSpeed() {
+  const jarallaxElement = document.getElementById('main-hero-img')
+
+  // Verificar si el elemento jarallax existe
+  if (window.location.pathname.startsWith('/project/') && !jarallaxElement) {
+    console.error('Jarallax element not found')
+    return
+  }
+
+  if (window.location.pathname.startsWith('/project/')) {
+    // Verificar el tamaño de la pantalla y ajustar el valor de data-speed
+    if (window.innerWidth < 768) {
+      jarallaxElement.setAttribute('data-speed', '-0.2') // Para pantallas pequeñas (móviles)
+    } else {
+      jarallaxElement.setAttribute('data-speed', '0.2') // Para pantallas grandes (desktops)
+    }
+    // Destruir la instancia existente de jarallax para reiniciarla con el nuevo valor
+    jarallax(jarallaxElement, 'destroy') // Destruye la instancia actual
+    jarallax(jarallaxElement) // Reinicializa jarallax con el nuevo atributo data-speed
+  }
+}
+
+function applyTransformations() {
+  if (
+    window.location.pathname.endsWith('kikoto.html') ||
+    window.location.pathname.startsWith('/project/')
+  ) {
+    // Obtener la cantidad de scroll vertical (lo lejos que estás de la parte superior de la página)
+    const scrollY = window.scrollY
+
+    // Calcular la rotación basada en la cantidad de scroll (ajusta el valor de multiplicación según el efecto que quieras)
+    const rotation = scrollY * 0.005 // Ajusta este valor para un efecto más o menos pronunciado
+    const scale = scrollY * 0.0005 // Ajusta este valor para un efecto más o menos pronunciado
+    const translate = scrollY * 0.005 // Ajusta este valor para un efecto más o menos pronunciado
+
+    // Aplicar la rotación al div
+    rotateTarget.style.transform = `rotate(${rotation}deg) scale(${1 - scale})`
+
+    // Aplicar transformaciones a cada imagen
+    innerImages.forEach(function (image) {
+      image.style.transform = `rotate(${-rotation}deg) scale(${
+        1 + scale
+      }) translateX(-${translate * 7}px)`
+    })
+  }
+  updateJarallaxSpeed()
+}
+
+// Ejecutar transformaciones en el evento de scroll
+window.addEventListener('scroll', applyTransformations)
+window.addEventListener('resize', applyTransformations)
+
+// Ejecutar transformaciones en la primera carga de página
+applyTransformations()
+
+// Comportamiento para los vídeos
+document.addEventListener('DOMContentLoaded', function () {
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  }
+
+  const isMobile = isMobileDevice()
+
+  // Seleccionamos todos los contenedores de video
+  const videoContainers = document.querySelectorAll('.video-container')
+
+  videoContainers.forEach(function (container) {
+    const video = container.querySelector('.responsive-video')
+    const poster = container.querySelector('.poster-image')
+    const playButton = container.querySelector('.play-button')
+    if (isMobile) {
+      // Removemos el elemento de video para evitar la carga
+      video.parentNode.removeChild(video)
+      // Mostramos la imagen de póster
+      poster.style.display = 'flex'
+      poster.style.width = '100%'
+      if (playButton) {
+        playButton.addEventListener('click', function (event) {
+          event.preventDefault()
+          const videoSrc = playButton.getAttribute('href')
+          if (videoSrc) {
+            video.play()
+          }
+        })
+      }
+    } else {
+      //  Ocultamos el botón
+      if (playButton && playButton.parentElement) {
+        playButton.parentElement.remove()
+      }
+      // Añadimos dinámicamente el elemento source
+      const source = document.createElement('source')
+      source.src = video.getAttribute('data-video')
+      source.type = 'video/mp4' // Ajusta el tipo si usas otro formato
+      video.setAttribute('class', 'responsive-video')
+      video.appendChild(source)
+      // Removemos la imagen de póster
+      poster.parentNode.removeChild(poster)
+    }
+  })
+
+  //   Para la section HERO, aplicar diferente propiedad de height según el tipo de dispositivo
+  const heroSections = document.querySelectorAll('.hero-section')
+
+  if (isMobile) {
+    heroSections.forEach((section) => {
+      section.classList.add('mobile')
+      section.classList.remove('min-vh-100')
+    })
+  } else {
+    heroSections.forEach((section) => {
+      section.classList.add('desktop')
+      section.classList.add('min-vh-100')
+    })
+  }
+})

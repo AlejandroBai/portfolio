@@ -244,70 +244,45 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark min-vh-100 hero-section">
-    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: linear-gradient(140deg, #7777DB, #7777DB); z-index: 0;"></div>
-    </div>
-
-    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100" style="min-height: 100svh;">
-        <div class="jarallax-img d-flex align-items-center align-items-lg-center">
-          <div class="container p-4 py-md-5">
-            <div class="row justify-content-center">
-              <div class="col-auto offset-lg-5 mb-auto">
-                <div id="rotate-target" style="aspect-ratio: 16/9">
-                  <img
-                    class="poster-image"
-                    src="../assets/img/projects/eva/poster-eva.jpg"
-                    alt="video_poster"
-                  />
-                  <!--
-                  <div class="video-container d-flex justify-content-center inner-image video">
-                    <video
-                      class="d-none responsive-video"
-                      poster="../assets/img/projects/eva/poster-eva.jpg"
-                      data-video="https://evacertification.com/video-1080p.mp4"
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                    >
-                      Tu navegador no soporta el elemento de vídeo.
-                    </video>
-                    <img
-                      class="poster-image"
-                      src="../assets/img/projects/eva/poster-eva.jpg"
-                      alt="Póster del video"
-                    />
-                  </div>
-                  -->
-                </div>
+  <section class="position-relative hero-section" style="background: #7777DB;">
+    <div class="container-fluid hero-section">
+      <div class="row h-100 justify-content-center align-items-center hero-section flex-md-row-reverse">
+        <div id="main-hero-img" class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="0.6">
+          <div class="jarallax-img justify-content-center justify-content-md-center">
+            <div class="d-md-none" style="height: 0vh;"></div>
+            <div id="rotate-target" class="new-container">
+              <div class="video-container d-flex justify-content-center">
+                <video
+                  class="responsive-video inner-image"
+                  poster="../assets/img/projects/eva/poster-eva.jpg"
+                  data-video="https://evacertification.com/video-1080p.mp4"
+                  autoplay
+                  playsinline
+                  muted
+                  loop
+                >
+                  <span data-key="common.video_no_support"></span>
+                </video>
+                <img
+                  class="poster-image inner-image"
+                  src="../assets/img/projects/eva/poster-eva.jpg"
+                  alt="video_poster"
+                />
               </div>
             </div>
+            <div class="d-md-none" style="height: 35svh;"></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="jarallax w-100 mx-auto position-absolute top-0" style="z-index: 0;"
-         data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
-        <div class="jarallax-img d-flex align-items-lg-center">
-          <div class="container d-flex flex-column justify-content-end">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <h2 class="main-title text-white gloock mt-n5" data-key="projects.eva.name"></h2>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <a href="#main-section" class="btn btn-icon btn-light rounded-pill mt-lg-5" data-scroll
-                   aria-label="Scroll to main-section">
-                  <i class="baicon-arrow-down"></i>
-                </a>
-              </div>
-            </div>
-            <div class="d-lg-none" style="height: 30vh"></div>
+        <div class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="-0.2">
+          <div class="jarallax-img justify-content-center justify-content-md-center pb-5 pb-md-0 pt-md-5">
+            <div class="d-md-none" style="height: 65svh;"></div>
+            <h2 class="main-title text-white gloock text-center text-md-start"
+                data-key="projects.eva.name"></h2>
+            <a href="#main-section" class="btn btn-icon btn-light rounded-pill" data-scroll
+               aria-label="Scroll to main-section">
+              <i class="baicon-arrow-down"></i>
+            </a>
+            <div class="d-md-none" style="height: 15svh;"></div>
           </div>
         </div>
       </div>
@@ -315,7 +290,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 100;">
+  <section id="main-section" class="position-relative py-5 mb-sm-5 bg-body z-2">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -497,35 +472,25 @@
           <div class="col-12">
             <figure>
               <div class="border rounded-1 overflow-hidden" style="background: #e8ddff; aspect-ratio: 16/9;">
-                <img
-                  class="poster-image"
-                  src="../assets/img/projects/eva/poster-eva.jpg"
-                  alt="Póster del video"
-                />
-                <!--
                 <div class="video-container d-flex">
                   <video
-                    class="d-none responsive-video"
+                    class="responsive-video"
                     poster="../assets/img/projects/eva/poster-eva.jpg"
                     data-video="https://evacertification.com/video-1080p.mp4"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
                     controls
                     width="100%"
                     height="100%"
                     style="aspect-ratio: 16/9;"
                   >
-                    Tu navegador no soporta el elemento de vídeo.
+                    <span data-key="common.video_no_support"></span>
                   </video>
                   <img
                     class="poster-image"
                     src="../assets/img/projects/eva/poster-eva.jpg"
-                    alt="Póster del video"
+                    alt="video_poster"
+                    style="display: none;"
                   />
                 </div>
-              -->
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
                           data-key="projects.eva.video_figcaption"></figcaption>

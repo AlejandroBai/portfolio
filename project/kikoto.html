@@ -142,51 +142,32 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark min-vh-100 hero-section">
-    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: linear-gradient(180deg, #02a9f4, #298cfc); z-index: 0;"></div>
-    </div>
-
-    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100" style="min-height: 100svh;">
-        <div class="jarallax-img d-flex align-items-center align-items-lg-center">
-          <div class="container p-4 py-md-5">
-            <div class="row justify-content-center">
-              <div class="col-auto offset-lg-5 mb-auto">
-                <div id="rotate-target">
-                  <img src="../assets/img/projects/kikoto/hero-img_es.jpg" class="inner-image"
-                       alt="alejandro_bayo_saiz_kikoto">
-                </div>
-              </div>
+  <section class="position-relative hero-section" style="background: linear-gradient(180deg, #02a9f4, #298cfc);">
+    <div class="container-fluid hero-section">
+      <div class="row h-100 justify-content-center align-items-center hero-section flex-md-row-reverse">
+        <div id="main-hero-img" class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="0.6">
+          <div class="jarallax-img justify-content-center justify-content-md-center">
+            <div id="rotate-target" class="new-container">
+              <img src="../assets/img/projects/kikoto/hero-img_es.jpg" class="inner-image"
+                   alt="alejandro_bayo_saiz_kikoto">
             </div>
+            <div class="d-md-none" style="height: 35svh;"></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="-0.2">
+          <div class="jarallax-img justify-content-center justify-content-md-center pb-5 pb-md-0 pt-md-5">
+            <div class="d-md-none" style="height: 65svh;"></div>
+            <h2 class="main-title text-white gloock text-center text-md-start" data-key="projects.kikoto.name"></h2>
+            <a href="#main-section" class="btn btn-icon btn-light rounded-pill" data-scroll
+               aria-label="Scroll to main-section">
+              <i class="baicon-arrow-down"></i>
+            </a>
+            <div class="d-md-none" style="height: 15svh;"></div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="jarallax w-100 mx-auto position-absolute top-0" style="z-index: 0;" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
-        <div class="jarallax-img d-flex align-items-lg-center">
-          <div class="container d-flex flex-column justify-content-end">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <h2 class="main-title text-white gloock mt-n5" data-key="projects.kikoto.name"></h2>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <a href="#main-section" class="btn btn-icon btn-light rounded-pill mt-lg-5" data-scroll
-                   aria-label="Scroll to main-section">
-                  <i class="baicon-arrow-down"></i>
-                </a>
-              </div>
-            </div>
-            <div class="d-lg-none" style="height: 30vh"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="waves-container">
+    <div class="waves-container z-1">
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>
@@ -202,8 +183,9 @@
     </div>
   </section>
 
+
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 100;">
+  <section id="main-section" class="position-relative py-5 mb-sm-5 bg-body z-2">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -651,14 +633,14 @@
         <div class="row">
           <div class="col-12">
             <figure>
-              <div class="border rounded-1 overflow-hidden p-5 d-lg-none"
-                   style="background: linear-gradient(to right, #02a9f4, #288CFC);">
-                <div class="d-nline-flex position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
-                  <a href="https://alexbayosaiz.com/assets/img/projects/kikoto/hurry/hurry.mp4" class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
-                    <i class="baicon-play-filled"></i>
-                  </a>
-                </div>
-                <div class="video-container d-flex">
+              <div class="border rounded-1 overflow-hidden p-md-4 p-lg-5"
+                   style="background: linear-gradient(to right, #02a9f4, #288CFC); aspect-ratio: 4/3; width: 100%; max-height: 80svh;">
+                <div class="video-container body-section d-flex">
+                  <div class="position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
+                    <a href="https://alexbayosaiz.com/assets/img/projects/kikoto/hurry/hurry.mp4" class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
+                      <i class="baicon-play-filled"></i>
+                    </a>
+                  </div>
                   <video
                     class="responsive-video"
                     poster="../assets/img/projects/kikoto/stores/ios/ios_4.webp"
@@ -675,7 +657,7 @@
                     class="poster-image"
                     src="../assets/img/projects/kikoto/stores/ios/ios_4.webp"
                     alt="Póster del video"
-                    style="display: none; aspect-ratio: 375/812; max-height: 70vh; margin: 0 auto;"
+                    style="display: none;"
                   />
                 </div>
               </div>

@@ -145,47 +145,29 @@
   </header>
 
   <!-- Hero title -->
-  <section class="position-relative bg-dark min-vh-100 hero-section">
-    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
-      <div class="jarallax-img" style="background: #bbcde5;"></div>
-    </div>
 
-    <div id="main-hero-img" class="jarallax w-100 ms-auto position-absolute top-0" data-jarallax>
-      <div class="w-100 h-100" style="min-height: 100svh;">
-        <div class="jarallax-img d-flex align-items-center align-items-lg-center">
-          <div class="container p-4 py-md-5">
-            <div class="row justify-content-center">
-              <div class="col-auto offset-lg-5 mb-auto">
-                <div class="container-image bg-body">
-                  <img src="../assets/img/projects/customized/hero.svg" class="inner-image"
-                       alt="customized_illustration">
-                </div>
-              </div>
+  <section class="position-relative hero-section" style="background: #bbcde5;">
+    <div class="container-fluid hero-section">
+      <div class="row h-100 justify-content-center align-items-center hero-section flex-md-row-reverse">
+        <div id="main-hero-img" class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="0.6">
+          <div class="jarallax-img justify-content-center justify-content-md-center">
+            <div id="rotate-target" class="new-container">
+              <img src="../assets/img/projects/customized/hero.svg" class="inner-image"
+                   alt="alejandro_bayo_saiz_customized" style="width: 60%; margin: 0 auto;">
             </div>
+            <div class="d-md-none" style="height: 35svh;"></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="jarallax w-100 mx-auto position-absolute top-0" style="z-index: 0;" data-jarallax data-speed="-0.2">
-      <div class="w-100 h-100 min-vh-100">
-        <div class="jarallax-img d-flex align-items-lg-center">
-          <div class="container d-flex flex-column justify-content-end">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <h2 class="main-title gloock mt-n5" style="color: #011e35;" data-key="projects.customized.name"></h2>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-auto">
-                <a href="#main-section" data-scroll aria-label="Scroll to main-section"
-                   class="btn btn-icon btn-light rounded-pill mt-lg-5"
-                   style="background: #f37777; border-color: #f37777; color: #011e35;">
-                  <i class="baicon-arrow-down"></i>
-                </a>
-              </div>
-            </div>
-            <div class="d-lg-none" style="height: 30vh"></div>
+        <div class="col-12 col-md-5 jarallax jarallax-edited" data-jarallax data-speed="-0.2">
+          <div class="jarallax-img justify-content-center justify-content-md-center pb-5 pb-md-0 pt-md-5">
+            <div class="d-md-none" style="height: 65svh;"></div>
+            <h2 class="main-title gloock text-center text-md-start" style="color: #011e35;"
+                data-key="projects.customized.name"></h2>
+            <a href="#main-section" class="btn btn-icon rounded-pill btn-customized" data-scroll
+               aria-label="Scroll to main-section">
+              <i class="baicon-arrow-down"></i>
+            </a>
+            <div class="d-md-none" style="height: 15svh;"></div>
           </div>
         </div>
       </div>
@@ -193,7 +175,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5" style="z-index: 100;">
+  <section id="main-section" class="position-relative py-5 mb-sm-5 bg-body z-2">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
