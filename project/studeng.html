@@ -188,7 +188,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5 bg-body z-2">
+  <section id="main-section" class="position-relative py-5 mt-4 mb-sm-5 bg-body z-2">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -501,7 +501,7 @@
   <section class="container py-5">
     <div class="row">
       <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
-        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.studeng.hurry_video_title"></h3>
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.studeng.ui_prototype_web"></h3>
         <div class="row">
           <div class="col-12">
             <figure>
@@ -509,14 +509,15 @@
                    style="background: linear-gradient(to right, #e8ddff, #e8ddff); aspect-ratio: 4/3; width: 100%; max-height: 80svh;">
                 <div class="video-container body-section d-flex">
                   <div class="position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
-                    <a href="https://alexbayosaiz.com/assets/img/projects/kikoto/hurry/hurry.mp4"
-                       class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
+                    <a href="../assets/img/projects/studeng/ui/ui.mp4"
+                       class="btn btn-icon btn-xl btn-dark rounded-circle play-button position-relative"
+                       style="z-index: 100">
                       <i class="baicon-play-filled"></i>
                     </a>
                   </div>
                   <video
                     class="responsive-video"
-                    poster="../assets/img/projects/studeng/poster-studeng.jpg"
+                    poster="../assets/img/projects/studeng/ui/poster.webp"
                     data-video="../assets/img/projects/studeng/ui/ui.mp4"
                     autoplay
                     muted
@@ -525,12 +526,6 @@
                   >
                     <span data-key="common.video_no_support"></span>
                   </video>
-                  <img
-                    class="poster-image"
-                    src="../assets/img/projects/studeng/poster-studeng.jpg"
-                    alt="Póster del video"
-                    style="display: none;"
-                  />
                 </div>
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
@@ -595,7 +590,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/cdp.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -606,7 +601,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/cdpc.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -618,7 +613,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/challenges.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -630,7 +625,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/classification.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -641,7 +636,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/csec.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -652,7 +647,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/ct.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -663,7 +658,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/file-2.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -674,7 +669,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/file.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -685,7 +680,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/hsdf.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -696,7 +691,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/image.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -710,6 +705,8 @@
           "loop": true,
           "grabCursor": false,
           "centeredSlides": true,
+          "allowTouchMove": false,
+          "simulateTouch": false,
           "autoplay": {
             "delay": 0,
             "disableOnInteraction": false
@@ -733,7 +730,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/min-max.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -744,7 +741,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/multiple-choice.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -755,7 +752,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/placeholder.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -766,7 +763,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/profile.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -777,7 +774,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/rlm.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -788,7 +785,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/short-answer.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -799,7 +796,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/single-choice.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -810,7 +807,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/toggle-dynamic-clay.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -821,7 +818,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/true-false.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -832,7 +829,7 @@
                  style="aspect-ratio: 1.618">
               <img class="position-absolute h-100 translate-middle-x start-50"
                    src="../assets/img/projects/studeng/illustrations/video.png"
-                   alt="illustration_3d">
+                   alt="illustration_3d" draggable="false">
             </div>
           </div>
         </div>
@@ -862,14 +859,21 @@
   </section>
 
   <!--  Vídeo AE -->
-  <section class="container py-5">
+  <section class="container py-lg-5">
     <div class="row">
       <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
         <div class="row">
           <div class="col-12">
             <figure>
-              <div class="border rounded-1 overflow-hidden" style="background: #e8ddff; aspect-ratio: 16/9;">
-                <div class="video-container d-flex">
+              <div class="border rounded-1 overflow-hidden"
+                   style="background: #e8ddff;aspect-ratio: 16/9;">
+                <div class="video-container promo-section d-flex">
+                  <div class="position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
+                    <a href="https://api.studeng.es/video.mp4"
+                       class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
+                      <i class="baicon-play-filled"></i>
+                    </a>
+                  </div>
                   <video
                     class="responsive-video"
                     poster="../assets/img/projects/studeng/poster-studeng.jpg"
@@ -877,16 +881,9 @@
                     controls
                     width="100%"
                     height="100%"
-                    style="aspect-ratio: 16/9;"
                   >
                     <span data-key="common.video_no_support"></span>
                   </video>
-                  <img
-                    class="poster-image"
-                    src="../assets/img/projects/studeng/poster-studeng.jpg"
-                    alt="video_poster"
-                    style="display: none;"
-                  />
                 </div>
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"

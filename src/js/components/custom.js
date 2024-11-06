@@ -115,6 +115,31 @@ if (window.location.pathname.startsWith('/project/')) {
   updateHeaderClasses()
 }
 
+if (window.location.pathname.startsWith('/old-project/')) {
+  window.addEventListener('scroll', updateHeaderClassesOldProjects)
+  window.addEventListener('resize', updateHeaderClassesOldProjects)
+  updateHeaderClassesOldProjects()
+}
+
+function updateHeaderClassesOldProjects() {
+  let footerPosition = footerSection?.getBoundingClientRect().top || null
+  if (window.innerWidth >= 576) {
+    header.classList.remove('bg-light', 'border-bottom')
+    header.classList.add('bg-transparent')
+    if (footerPosition !== null && footerPosition <= scrollThreshold2) {
+      if (header.getAttribute('data-initial-bs-theme') === 'light') {
+        header.setAttribute('data-bs-theme', 'dark')
+      }
+    } else {
+      header.setAttribute('data-bs-theme', 'light')
+    }
+  } else {
+    // EN PANTALLAS MENORES A 576PX
+    header.classList.add('bg-light', 'border-bottom')
+    header.classList.remove('bg-transparent')
+  }
+}
+
 function updateHeaderClasses() {
   let mainPosition = mainSection?.getBoundingClientRect().top || null
   let footerPosition = footerSection?.getBoundingClientRect().top || null
@@ -196,10 +221,7 @@ function updateJarallaxSpeed() {
 }
 
 function applyTransformations() {
-  if (
-    window.location.pathname.endsWith('kikoto.html') ||
-    window.location.pathname.startsWith('/project/')
-  ) {
+  if (window.location.pathname.startsWith('/project/')) {
     // Obtener la cantidad de scroll vertical (lo lejos que estás de la parte superior de la página)
     const scrollY = window.scrollY
 
@@ -242,37 +264,60 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoContainers = document.querySelectorAll('.video-container')
 
   videoContainers.forEach(function (container) {
-    const video = container.querySelector('.responsive-video')
     const poster = container.querySelector('.poster-image')
     const playButton = container.querySelector('.play-button')
+
     if (isMobile) {
-      // Removemos el elemento de video para evitar la carga
-      video.parentNode.removeChild(video)
       // Mostramos la imagen de póster
       poster.style.display = 'flex'
       poster.style.width = '100%'
+
       if (playButton) {
         playButton.addEventListener('click', function (event) {
           event.preventDefault()
-          const videoSrc = playButton.getAttribute('href')
-          if (videoSrc) {
-            video.play()
-          }
+
+          // Crear y agregar el elemento de vídeo dinámicamente
+          const video = document.createElement('video')
+          video.setAttribute('class', 'responsive-video')
+          video.setAttribute('controls', 'true')
+          video.setAttribute('autoplay', 'true')
+          video.style.width = '100%'
+
+          const source = document.createElement('source')
+          source.src = playButton.getAttribute('href')
+          source.type = 'video/mp4' // Ajusta el tipo si usas otro formato
+
+          video.appendChild(source)
+          container.appendChild(video)
+
+          // Ocultar el póster y botón después de crear el vídeo
+          poster.style.display = 'none'
+          playButton.style.display = 'none'
+
+          video.play().catch((error) => {
+            console.error('Error al reproducir el vídeo:', error)
+          })
         })
       }
     } else {
-      //  Ocultamos el botón
+      //  Ocultamos el botón y cargamos el vídeo de manera estática para escritorio
       if (playButton && playButton.parentElement) {
         playButton.parentElement.remove()
       }
-      // Añadimos dinámicamente el elemento source
-      const source = document.createElement('source')
-      source.src = video.getAttribute('data-video')
-      source.type = 'video/mp4' // Ajusta el tipo si usas otro formato
-      video.setAttribute('class', 'responsive-video')
-      video.appendChild(source)
-      // Removemos la imagen de póster
-      poster.parentNode.removeChild(poster)
+
+      const video = container.querySelector('.responsive-video')
+      if (video) {
+        const source = document.createElement('source')
+        source.src = video.getAttribute('data-video')
+        source.type = 'video/mp4' // Ajusta el tipo si usas otro formato
+        video.appendChild(source)
+        // video.setAttribute('controls', 'true')
+
+        // Removemos la imagen de póster
+        if (poster && poster.parentNode) {
+          poster.parentNode.removeChild(poster)
+        }
+      }
     }
   })
 

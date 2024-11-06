@@ -191,7 +191,7 @@
   </section>
 
   <!-- Intro -->
-  <section id="main-section" class="position-relative py-5 mb-sm-5 bg-body z-2">
+  <section id="main-section" class="position-relative py-5 mt-4 mb-sm-5 bg-body z-2">
     <div class="container position-relative z-2 py-5 pb-lg-0">
       <div class="row">
         <!-- Description -->
@@ -373,20 +373,25 @@
   </section>
 
   <!--  Prototipo XD -->
-  <section class="container pb-5 mb-lg-5 prototype_xd_mobile_section">
+  <section class="container pb-5 prototype_xd_mobile_section">
     <div class="row position-sm-relative">
       <div class="offset-sm-1 col-sm-10 col-lg-10">
-        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.aumentur.ui_prototype_mobile"></h3>
+        <h3 class="text-uppercase fs-base fw-bolder text-nowrap" data-key="projects.aumentur.ui_prototype_mobile"></h3>
         <div class="row justify-content-center">
           <div class="col-auto col-sm-12">
             <figure class="d-block mx-auto prototype_xd_mobile_container">
-              <div class="border rounded-1 overflow-hidden p-sm-5"
-                   style="background: #ff5252;">
-                <iframe class="prototype_xd_mobile" height="100%" width="100%"
-                        src="https://xd.adobe.com/embed/e77f0e8a-2dd1-429f-ae8f-15cfe01519c7-b22c/?fullscreen"
-                        frameborder="0" allowfullscreen
-                        style="aspect-ratio: 375/812; border-radius: 6px;"
-                ></iframe>
+              <div class="border rounded-1 overflow-hidden p-sm-5" id="iframe-container"
+                   style="background: linear-gradient(to right, #ff5252, #f86565);">
+                <!-- Marcador de posición -->
+                <div class="d-flex justify-content-center align-items-center"
+                     style="aspect-ratio: 1440/900; width: 100%">
+                  <div class="page-loading active" style="background: linear-gradient(to right, #ff5252, #f86565);">
+                    <div class="page-loading-inner">
+                      <div class="page-spinner"></div>
+                      <span class="text-white" data-key="common.loading_prototype"></span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
                           data-key="projects.aumentur.ui_figcaption_mobile"></figcaption>
@@ -394,7 +399,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4">
+      <div class="col-sm-auto mb-sm-5 position-sm-absolute end-0 bottom-0 pe-0 pe-md-4 text-center">
         <a href="https://xd.adobe.com/view/e77f0e8a-2dd1-429f-ae8f-15cfe01519c7-b22c/" target="_blank"
            class="btn-custom ms-auto">
           <i class="baicon-arrow-up-right"></i>
@@ -408,13 +413,19 @@
   <section class="container pb-5">
     <div class="row">
       <div class="offset-sm-1 col-sm-10 col-lg-10 mb-5">
-        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.aumentur.ui_prototype_mobile2"></h3>
+        <h3 class="text-uppercase fs-base fw-bolder" data-key="projects.kikoto.hurry_video_title"></h3>
         <div class="row">
           <div class="col-12">
             <figure>
-              <div class="border rounded-1 overflow-hidden p-5"
-                   style="background: #ff5252;">
-                <div class="video-container d-flex">
+              <div class="border rounded-1 overflow-hidden p-md-4 p-lg-5"
+                   style="background: linear-gradient(to right, #ff5252, #f86565); aspect-ratio: 4/3; width: 100%; max-height: 80svh;">
+                <div class="video-container body-section d-flex">
+                  <div class="position-absolute top-50 start-50 translate-middle z-2 p-4" style="z-index: 100">
+                    <a href="../assets/img/projects/aumentur/ui/ui.mp4"
+                       class="btn btn-icon btn-xl btn-dark rounded-circle play-button">
+                      <i class="baicon-play-filled"></i>
+                    </a>
+                  </div>
                   <video
                     class="responsive-video"
                     poster="../assets/img/projects/aumentur/hero.webp"
@@ -423,22 +434,13 @@
                     muted
                     loop
                     playsinline
-                    style="aspect-ratio: 375/812; max-height: 70vh; margin: 0 auto;"
                   >
-                    <!-- El elemento source se añadirá dinámicamente -->
-                    Tu navegador no soporta el elemento de vídeo.
+                    <span data-key="common.video_no_support"></span>
                   </video>
-                  <!-- Imagen de póster para móviles -->
-                  <img
-                    class="poster-image"
-                    src="../assets/img/projects/aumentur/hero.webp"
-                    alt="Póster del video"
-                    style="display: none;"
-                  />
                 </div>
               </div>
               <figcaption class="text-center text-muted mt-2 px-4"
-                          data-key="projects.aumentur.ui_figcaption_mobile2"></figcaption>
+                          data-key="projects.kikoto.hurry_video_figcaption"></figcaption>
             </figure>
           </div>
         </div>
@@ -524,6 +526,29 @@
 <script src="../assets/js/theme.min.js"></script>
 
 <script>
+  // Función para cargar el iframe
+  function loadIframe() {
+    const iframeContainer = document.getElementById("iframe-container")
+    iframeContainer.innerHTML = `
+            <iframe class="prototype_xd_mobile" width="100%" height="auto"
+                    src="https://xd.adobe.com/embed/e77f0e8a-2dd1-429f-ae8f-15cfe01519c7-b22c/?fullscreen"
+                    frameborder="0" allowfullscreen
+                    style="aspect-ratio: 375/812; border-radius: 6px;"
+                    ></iframe>`
+  }
+
+  // Crear IntersectionObserver para cargar el iframe cuando sea visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadIframe()
+        observer.disconnect() // Desconectar después de cargar para no volver a cargar
+      }
+    })
+  })
+
+  // Observa el contenedor del iframe
+  observer.observe(document.getElementById("iframe-container"))
 </script>
 </body>
 </html>
