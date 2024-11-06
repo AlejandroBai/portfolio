@@ -115,7 +115,10 @@ if (window.location.pathname.startsWith('/project/')) {
   updateHeaderClasses()
 }
 
-if (window.location.pathname.startsWith('/old-project/')) {
+if (
+  window.location.pathname.startsWith('/old-project/') ||
+  window.location.pathname.endsWith('/old-projects.html')
+) {
   window.addEventListener('scroll', updateHeaderClassesOldProjects)
   window.addEventListener('resize', updateHeaderClassesOldProjects)
   updateHeaderClassesOldProjects()
