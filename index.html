@@ -40,7 +40,7 @@
   <link rel="me" href="https://www.instagram.com/alexbayosaiz/" type="text/html">
 
   <!-- Theme color -->
-  <meta name="theme-color" content="#02a9f4" id="theme-color">
+  <meta name="theme-color" content="#006e39" id="theme-color">
 
   <!--  Favicon -->
   <link rel="icon" type="image/png" href="../assets/img/about/favicon/favicon-48x48.png" sizes="48x48" />
@@ -85,29 +85,118 @@
 
   <!-- Theme styles + Bootstrap -->
   <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <script>
-    (function() {
-      window.onload = function() {
-        const preloader = document.querySelector(".page-loading")
-        preloader.classList.remove("active")
-        setTimeout(function() {
-          preloader.remove()
-        }, 1500)
-      }
-    })()
+    // (function() {
+    //   window.onload = function() {
+    //     const preloader = document.querySelector(".page-loading")
+    //     preloader.classList.remove("active")
+    //     setTimeout(function() {
+    //       preloader.remove()
+    //     }, 1500)
+    //   }
+    // })()
   </script>
+
+  <style>
+      /*body {*/
+      /*    margin: 0;*/
+      /*    padding: 0;*/
+      /*    background-color: #000;*/
+      /*    height: 100vh;*/
+      /*    overflow: hidden;*/
+      /*    font-family: Arial, sans-serif;*/
+      /*}*/
+
+      .hero-animated {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 10000;
+          /*transition: all 1.5s ease-in-out;*/
+          clip-path: inset(0 0 0 0); /* Inicialmente ocupa toda la pantalla */
+          transition: all 1.5s ease-in-out;
+          border-radius: 0; /* Comienza sin bordes redondeados */
+          padding: 24px;
+      }
+
+      .wrapper-intro {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+      }
+
+      .text {
+          -webkit-text-stroke: 1px var(--bai-secondary-color);
+          color: transparent;
+          font-size: 12vw;
+          position: relative;
+          padding: 2px;
+      }
+
+      @media screen and (min-width: 576px) {
+          .text {
+              font-size: clamp(80px, 8.5vw, 9vw);
+          }
+      }
+
+      .text::before {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: transparent;
+          /*color: var(--bai-light);*/
+          background: linear-gradient(45deg, #ffffff, #9ec7b3); /* Degradado que quieres */
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-stroke: 0;
+          width: 0;
+          padding: 2px;
+          overflow: hidden;
+          white-space: nowrap;
+          animation: text-fill 2s ease-in-out forwards;
+          animation-delay: 300ms;
+      }
+
+      @keyframes text-fill {
+          100% {
+              width: 100%;
+          }
+      }
+  </style>
 </head>
 
 <body>
+<!--<div class="page-loading active">-->
+<!--  <div class="page-loading-inner">-->
+<!--    <div class="page-spinner"></div>-->
+<!--    <span data-key="common.loading"></span>-->
+<!--  </div>-->
+<!--</div>-->
 
-<div class="page-loading active">
-  <div class="page-loading-inner">
-    <div class="page-spinner"></div>
-    <span data-key="common.loading"></span>
+<div class="hero-animated bg-dark text-start" id="heroAnimated">
+  <div class="wrapper-intro">
+    <p class="text gloock animate__animated animate__fadeInUp" data-text="Álex Bayo Saiz">
+      Álex Bayo Saiz
+    </p>
+    <div class="text-start w-100 animate__animated animate__fadeInUp animate__delay-1s">
+      <h2 class="mb-1 text-uppercase fw-bold fs-5 text-light" style="letter-spacing: 1.9px"
+          data-key="common.product_designer"></h2>
+    </div>
   </div>
 </div>
-
 
 <main class="h-100">
 
@@ -118,9 +207,10 @@
 
   <header class="navbar navbar-expand-lg fixed-top py-1 py-md-0 bg-transparent" style="background: none;">
     <div class="container-fluid px-1 px-sm-2 p-md-3 px-lg-4">
-      <a class="fs-sm fw-bold btn btn-sm btn-outline-dark rounded-pill border-0 px-3 fs-sm" href="about.html">
+      <a id="profileButton" class="fs-sm fw-bold btn btn-sm btn-outline-dark rounded-pill border-0 px-3 fs-sm"
+         href="about.html">
         <span class="flex-shrink-0 me-2">
-          <svg height="20" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          <svg height="20" xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 305.7 435.1" style="enable-background:new 0 0 305.7 435.1;" xml:space="preserve">
 <style type="text/css">
@@ -166,6 +256,7 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
   </header>
 
   <div class="h-100 vw-100 overflow-hidden" id="master-container">
+    <div id="decorator2" class="decorator bg-dark d-none d-lg-block"></div>
     <div class="swiper first-swiper d-none d-lg-block" id="first-swiper"
          data-swiper-options='{
             "direction": "horizontal",
@@ -192,31 +283,9 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
             }
            }
           }'>
-      <div class="decorator d-none d-lg-block"></div>
+      <div id="decorator" class="decorator d-none d-lg-block"></div>
 
       <div class="swiper-wrapper">
-        <!-- Item -->
-        <div class="swiper-slide" style="background: linear-gradient(340deg, #92cde7, #ffffff);" data-color="#02a9f4"
-             data-decorator-color="#02a9f4">
-          <div class="position-relative h-100 p-5">
-            <div class="d-flex flex-column flex-lg-row align-items-center h-100 position-relative z-2">
-              <div class="position-relative w-100 order-lg-2"></div>
-              <div class="w-100 order-lg-1 px-0 px-lg-4 py-4 pt-lg-0">
-                <div class="text-center text-sm-start mx-auto px-lg-5">
-                  <h2 class="main-title gloock pb-2 pb-sm-0" data-key="projects.kikoto.name"
-                      style="color: #02a9f4;"></h2>
-                  <p class="d-none d-sm-block pb-3 pb-lg-4 mb-1 lead index-lead text-dark"
-                     data-key="projects.kikoto.main_lead"></p>
-                  <a class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
-                     href="project/kikoto.html" data-key="common.open_case_study">
-                    <i class="baicon-arrow-right ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Item -->
         <div class="swiper-slide" style="background: linear-gradient(140deg, #d2e8d3, #e8ddff);" data-color="#006e39"
              data-decorator-color="#006d39">
@@ -231,6 +300,28 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
                      data-key="projects.studeng.main_lead" style="color: #414941"></p>
                   <a class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
                      href="project/studeng.html" data-key="common.open_case_study">
+                    <i class="baicon-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide" style="background: linear-gradient(340deg, #92cde7, #ffffff);" data-color="#02a9f4"
+             data-decorator-color="#02a9f4">
+          <div class="position-relative h-100 p-5">
+            <div class="d-flex flex-column flex-lg-row align-items-center h-100 position-relative z-2">
+              <div class="position-relative w-100 order-lg-2"></div>
+              <div class="w-100 order-lg-1 px-0 px-lg-4 py-4 pt-lg-0">
+                <div class="text-center text-sm-start mx-auto px-lg-5">
+                  <h2 class="main-title gloock pb-2 pb-sm-0" data-key="projects.kikoto.name"
+                      style="color: #02a9f4;"></h2>
+                  <p class="d-none d-sm-block pb-3 pb-lg-4 mb-1 lead index-lead text-dark"
+                     data-key="projects.kikoto.main_lead"></p>
+                  <a class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
+                     href="project/kikoto.html" data-key="common.open_case_study">
                     <i class="baicon-arrow-right ms-2"></i>
                   </a>
                 </div>
@@ -415,31 +506,6 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
          }'>
 
       <div class="swiper-wrapper">
-        <div class="swiper-slide" data-color="#02a9f4" data-decorator-color="#02a9f4">
-          <a href="project/kikoto.html" class="card">
-            <img src="assets/img/projects/kikoto/bg-night.webp" alt="thumbnail_kikoto" />
-          </a>
-
-          <div class="d-flex flex-column align-items-center position-relative z-2 d-lg-none">
-            <div
-              class="w-100 order-lg-1 px-0 px-lg-4 py-4 pt-lg-0">
-              <div class="text-center mx-auto">
-                <h2 class="main-title gloock pb-2 pb-sm-0" data-key="projects.kikoto.name" style="color: #02a9f4;"></h2>
-                <p class="pb-3 pb-lg-4 mb-1 text-dark"
-                   data-key="projects.kikoto.main_lead"></p>
-              </div>
-            </div>
-            <a href="project/kikoto.html" class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
-               data-key="common.open_case_study">
-              <i class="baicon-arrow-right ms-2"></i>
-            </a>
-            <a href="old-projects.html"
-               class="btn btn-outline-dark rounded-pill border-0 d-lg-none m-2 px-3"
-               style="z-index: 10" data-key="common.old_projects">
-            </a>
-          </div>
-        </div>
-
         <div class="swiper-slide" data-color="#006e39" data-decorator-color="#006e39">
           <a href="project/studeng.html" class="card">
             <div class="video-container">
@@ -473,6 +539,31 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
               </div>
             </div>
             <a href="project/studeng.html" class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
+               data-key="common.open_case_study">
+              <i class="baicon-arrow-right ms-2"></i>
+            </a>
+            <a href="old-projects.html"
+               class="btn btn-outline-dark rounded-pill border-0 d-lg-none m-2 px-3"
+               style="z-index: 10" data-key="common.old_projects">
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-color="#02a9f4" data-decorator-color="#02a9f4">
+          <a href="project/kikoto.html" class="card">
+            <img src="assets/img/projects/kikoto/bg-night.webp" alt="thumbnail_kikoto" />
+          </a>
+
+          <div class="d-flex flex-column align-items-center position-relative z-2 d-lg-none">
+            <div
+              class="w-100 order-lg-1 px-0 px-lg-4 py-4 pt-lg-0">
+              <div class="text-center mx-auto">
+                <h2 class="main-title gloock pb-2 pb-sm-0" data-key="projects.kikoto.name" style="color: #02a9f4;"></h2>
+                <p class="pb-3 pb-lg-4 mb-1 text-dark"
+                   data-key="projects.kikoto.main_lead"></p>
+              </div>
+            </div>
+            <a href="project/kikoto.html" class="btn btn-lg btn-outline-dark rounded-pill text-uppercase fw-bold"
                data-key="common.open_case_study">
               <i class="baicon-arrow-right ms-2"></i>
             </a>
@@ -593,9 +684,14 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
 <script>
   (function() {
     document.addEventListener("DOMContentLoaded", function() {
+      setupSwipersSync()
+      handleHeroAnimation()
+    })
+
+    function setupSwipersSync() {
       let checkInterval = setInterval(function() {
-        const mainSwiperElement = document.querySelector("#first-swiper").swiper
-        const secondarySwiperElement = document.querySelector("#secondary-swiper").swiper
+        const mainSwiperElement = document.querySelector("#first-swiper")?.swiper
+        const secondarySwiperElement = document.querySelector("#secondary-swiper")?.swiper
 
         if (mainSwiperElement && secondarySwiperElement) {
           clearInterval(checkInterval)
@@ -605,51 +701,130 @@ C0,343.2,10.8,361.9,28.3,372L125.9,427.9z" />
 
       function initializeSwipersSync(mainSwiper, secondarySwiper) {
         mainSwiper.on("slideChange", function() {
-          console.log("cambia")
           secondarySwiper.slideTo(mainSwiper.activeIndex)
           updateThemeColor()
         })
 
         secondarySwiper.on("slideChange", function() {
-          console.log("cambia")
           mainSwiper.slideTo(secondarySwiper.activeIndex)
           updateThemeColor()
         })
       }
 
       function updateThemeColor() {
-        var activeSlide = document.querySelector(".swiper-slide-active")
-        var newColor = activeSlide.getAttribute("data-color")
-        var newDecoratorColor = activeSlide.getAttribute("data-decorator-color")
-        document.querySelector("meta[name=\"theme-color\"]").setAttribute("content", newColor)
+        const activeSlide = document.querySelector(".swiper-slide-active")
+        const newColor = activeSlide.getAttribute("data-color")
+        const newDecoratorColor = activeSlide.getAttribute("data-decorator-color")
+
+        document.querySelector("meta[name='theme-color']").setAttribute("content", newColor)
         document.querySelector(".decorator").style.background = newDecoratorColor
-        var paginationBullets = document.querySelectorAll(".swiper-pagination-bullet")
-        if (paginationBullets.length > 0) {
-          paginationBullets.forEach(function(bullet) {
-            bullet.style.backgroundColor = newDecoratorColor
-          })
-        }
+
+        const paginationBullets = document.querySelectorAll(".swiper-pagination-bullet")
+        paginationBullets.forEach(bullet => {
+          bullet.style.backgroundColor = newDecoratorColor
+        })
       }
 
       window.addEventListener("resize", function() {
         if (window.innerWidth > 990) {
-          const mainSwiperElement = document.querySelector("#first-swiper").swiper
-          const secondarySwiperElement = document.querySelector("#secondary-swiper").swiper
+          const mainSwiperElement = document.querySelector("#first-swiper")?.swiper
+          const secondarySwiperElement = document.querySelector("#secondary-swiper")?.swiper
           if (mainSwiperElement && secondarySwiperElement) {
             initializeSwipersSync(mainSwiperElement, secondarySwiperElement)
           }
         }
       })
-    })
+    }
+
+    function handleHeroAnimation() {
+      const hero = document.getElementById("heroAnimated")
+      const decorator = document.getElementById("decorator")
+      if (!hero) return
+
+      // COMPROBAR SI ESTAMOS EN index.html (por si este código está en varias páginas)
+      const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/"
+
+      if (!isIndexPage) return
+
+      // DETECTAR SI ES UNA RECARGA (F5, ENTER)
+      const navigationType = performance.getEntriesByType("navigation")[0]?.type
+      const isReload = navigationType === "reload"
+
+      if (isReload) {
+        // SOLO BORRAMOS SI RECARGÓ
+        localStorage.removeItem("hasSeenHeroAnimation")
+      }
+
+      const hasSeenAnimation = localStorage.getItem("hasSeenHeroAnimation")
+
+      if (!hasSeenAnimation) {
+        setTimeout(() => {
+          hero.style.transform = "translateX(-100%)"
+          localStorage.setItem("hasSeenHeroAnimation", "true")
+        }, 3500)
+        setTimeout(() => {
+          decorator.style.transform = "translateX(12px)"
+          localStorage.setItem("hasSeenHeroAnimation", "true")
+        }, 5000)
+      } else {
+        hero.style.display = "none"
+        decorator.style.transform = "translateX(12px)"
+      }
+    }
 
     function adjustViewportHeight() {
       const masterContainer = document.getElementById("secondary-swiper")
-      const viewportHeight = window.innerHeight
-      masterContainer.style.height = viewportHeight + "px"
+      if (masterContainer) {
+        masterContainer.style.height = `${window.innerHeight}px`
+      }
     }
 
     window.addEventListener("load", adjustViewportHeight)
     window.addEventListener("resize", adjustViewportHeight)
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const profileButton = document.getElementById("profileButton")
+      const decorator = document.getElementById("decorator")
+      const decorator2 = document.getElementById("decorator2")
+
+      if (profileButton && decorator && decorator2) {
+        profileButton.addEventListener("mouseenter", () => {
+          decorator.style.transition = "transform 0.3s ease-in-out"
+          decorator.style.transform = "translateX(-12px)"
+          decorator2.style.transition = "transform 0.3s ease-in-out"
+
+          // Después de moverse a la izquierda, cambiar de color y volver a la derecha
+          setTimeout(() => {
+            decorator2.style.transform = "translateX(12px)"
+          }, 200)
+        })
+
+        profileButton.addEventListener("mouseleave", () => {
+          decorator2.style.transform = "translateX(0)"
+          // Reset opcional
+          setTimeout(() => {
+            decorator.style.transition = "transform 0.3s ease-in-out"
+            decorator.style.transform = "translateX(12px)"
+          }, 200) // Opcional si quieres resetear tras el hover
+        })
+
+        // CLICK: Simular arrastre y cambio de vista
+        profileButton.addEventListener("click", function(event) {
+          event.preventDefault() // Evita la navegación inmediata
+
+          decorator2.style.transition = "width 0.8s ease-in-out"
+          decorator2.style.width = "100%"
+          decorator2.style.transform = "translateX(0)"
+          decorator2.style.left = "0"
+          decorator2.style.zIndex = "100000"
+
+          // Esperar la animación antes de cambiar de vista
+          setTimeout(function() {
+            window.location.href = profileButton.getAttribute("href")
+          }, 1000) // Debe ser igual a la duración de la animación
+        })
+      }
+    })
   })()
 </script>
 </body>
